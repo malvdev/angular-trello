@@ -1,6 +1,31 @@
 {
   "version": 1,
   "projects": {
+    "config": {
+      "projectType": "library",
+      "root": "libs/config",
+      "sourceRoot": "libs/config/src",
+      "prefix": "app-config",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/config"],
+          "options": {
+            "jestConfig": "libs/config/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/config/src/**/*.ts",
+              "libs/config/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "trello": {
       "projectType": "application",
       "root": "apps/trello",
