@@ -26,6 +26,31 @@
         }
       }
     },
+    "shared-ui": {
+      "projectType": "library",
+      "root": "libs/shared/ui",
+      "sourceRoot": "libs/shared/ui/src",
+      "prefix": "app-ui",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui"],
+          "options": {
+            "jestConfig": "libs/shared/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/src/**/*.ts",
+              "libs/shared/ui/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "trello": {
       "projectType": "application",
       "root": "apps/trello",
@@ -138,6 +163,31 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/trello-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "welcome-feature-home": {
+      "projectType": "library",
+      "root": "libs/welcome/feature-home",
+      "sourceRoot": "libs/welcome/feature-home/src",
+      "prefix": "app-welcome",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/welcome/feature-home"],
+          "options": {
+            "jestConfig": "libs/welcome/feature-home/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/welcome/feature-home/src/**/*.ts",
+              "libs/welcome/feature-home/src/**/*.html"
+            ]
           }
         }
       }

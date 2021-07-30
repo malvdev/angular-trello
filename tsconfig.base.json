@@ -8,6 +8,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
+    "strictPropertyInitialization": false,
     "target": "es2015",
     "module": "esnext",
     "lib": ["es2017", "dom"],
@@ -15,7 +16,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@trello/libs/config": ["libs/config/src/index.ts"]
+      "@trello/libs/shared/ui": ["libs/shared/ui/src/index.ts"],
+      "@trello/libs/config": ["libs/config/src/index.ts"],
+      "@trello/libs/welcome/feature-home": [
+        "libs/welcome/feature-home/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

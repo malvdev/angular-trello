@@ -1,0 +1,20 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" #ngForm="ngForm">
+  <app-ui-form-field>
+    <input
+      #inputEmail
+      formControlName="email"
+      name="email"
+      type="email"
+      placeholder="Email"
+    />
+    <app-ui-form-field-error
+      *ngIf="
+        (email && email.touched && email.invalid) ||
+        (!registerForm.valid && ngForm.submitted)
+      "
+    >
+      Incorrect email address.
+    </app-ui-form-field-error>
+  </app-ui-form-field>
+  <button>Sign up</button>
+</form>
