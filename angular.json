@@ -1,6 +1,31 @@
 {
   "version": 1,
   "projects": {
+    "auth-domain": {
+      "projectType": "library",
+      "root": "libs/auth/domain",
+      "sourceRoot": "libs/auth/domain/src",
+      "prefix": "app-auth",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/auth/domain"],
+          "options": {
+            "jestConfig": "libs/auth/domain/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/auth/domain/src/**/*.ts",
+              "libs/auth/domain/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "config": {
       "projectType": "library",
       "root": "libs/config",

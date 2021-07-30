@@ -16,8 +16,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@trello/libs/shared/api": ["libs/shared/api/src/index.ts"],
+      "@trello/libs/auth/domain": ["libs/auth/domain/src/index.ts"],
       "@trello/libs/config": ["libs/config/src/index.ts"],
+      "@trello/libs/shared/api": ["libs/shared/api/src/index.ts"],
       "@trello/libs/shared/ui": ["libs/shared/ui/src/index.ts"],
       "@trello/libs/welcome/feature-home": [
         "libs/welcome/feature-home/src/index.ts"
