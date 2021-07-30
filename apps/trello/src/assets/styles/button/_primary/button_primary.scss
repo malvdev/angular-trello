@@ -1,0 +1,12 @@
+.app-button_primary {
+  background: var(--color-button-primary);
+  color: var(--color-button-primary-content);
+
+  &:hover {
+    background: var(--color-button-primary-hover);
+  }
+
+  &:active {
+    background: var(--color-button-primary-active);
+  }
+}
