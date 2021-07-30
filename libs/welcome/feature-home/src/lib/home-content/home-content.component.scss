@@ -1,0 +1,14 @@
+@import './styles/home-content/home-content.scss';
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-background-secondary);
+  background: linear-gradient(
+    0deg,
+    var(--color-white),
+    var(--color-background-secondary) 100%
+  );
+}
