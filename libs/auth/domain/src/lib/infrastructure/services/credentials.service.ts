@@ -26,7 +26,7 @@ export class CredentialsService {
     this._setSavedItem();
   }
 
-  isAuthenticated(): string | null {
+  getAuthToken(): string | null {
     return this._credentials?.accessToken || null;
   }
 
