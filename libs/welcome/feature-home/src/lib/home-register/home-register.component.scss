@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+input {
+  margin: 0;
+}

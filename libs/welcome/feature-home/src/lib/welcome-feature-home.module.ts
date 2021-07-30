@@ -3,15 +3,21 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { ButtonModule } from '@trello/libs/shared/ui';
+import { ButtonModule, FormFieldModule } from '@trello/libs/shared/ui';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { HomeContentComponent } from './home-content';
 import { HomeHeaderComponent } from './home-header';
+import { HomeRegisterComponent } from './home-register';
 
 @NgModule({
-  declarations: [HomeComponent, HomeHeaderComponent, HomeContentComponent],
+  declarations: [
+    HomeComponent,
+    HomeHeaderComponent,
+    HomeContentComponent,
+    HomeRegisterComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule,
@@ -19,6 +25,7 @@ import { HomeHeaderComponent } from './home-header';
     ReactiveFormsModule,
     HomeRoutingModule,
     ButtonModule,
+    FormFieldModule,
   ],
   exports: [RouterModule],
 })
