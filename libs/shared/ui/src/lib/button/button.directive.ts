@@ -3,7 +3,7 @@ import { Directive, HostBinding, Input } from '@angular/core';
 type ButtonTypes = 'base' | 'link' | 'primary' | 'secondary' | 'third';
 
 @Directive({
-  selector: '[appSharedUiButton]',
+  selector: '[appUiButton]',
 })
 export class ButtonDirective {
   @HostBinding('class')
@@ -11,6 +11,6 @@ export class ButtonDirective {
     return `app-button app-button_${this.type}`;
   }
 
-  @Input('appSharedUiButtonType')
+  @Input('appUiButtonType')
   type: ButtonTypes = 'base';
 }

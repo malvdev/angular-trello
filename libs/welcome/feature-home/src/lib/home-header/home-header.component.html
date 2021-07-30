@@ -2,16 +2,12 @@
   <nav class="app-home-header__nav">
     <a [routerLink]="['/']" href="#" class="app-home-header__logo">Trello</a>
     <div class="app-home-header__actions">
-      <a
-        appSharedUiButton
-        appSharedUiButtonType="link"
-        [routerLink]="['/login']"
-        href="#"
+      <a appUiButton appUiButtonType="link" [routerLink]="['/login']" href="#"
         >Log in</a
       >
       <a
-        appSharedUiButton
-        appSharedUiButtonType="primary"
+        appUiButton
+        appUiButtonType="primary"
         [routerLink]="['/register']"
         href="#"
       >
