@@ -30,6 +30,9 @@
     "config": {
       "tags": []
     },
+    "shared-ui": {
+      "tags": []
+    },
     "trello": {
       "tags": []
     },
