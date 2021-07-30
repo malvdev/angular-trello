@@ -26,6 +26,31 @@
         }
       }
     },
+    "shared-api": {
+      "projectType": "library",
+      "root": "libs/shared/api",
+      "sourceRoot": "libs/shared/api/src",
+      "prefix": "app-api",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/api"],
+          "options": {
+            "jestConfig": "libs/shared/api/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/api/src/**/*.ts",
+              "libs/shared/api/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-ui": {
       "projectType": "library",
       "root": "libs/shared/ui",

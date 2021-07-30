@@ -30,6 +30,9 @@
     "config": {
       "tags": []
     },
+    "shared-api": {
+      "tags": []
+    },
     "shared-ui": {
       "tags": []
     },
