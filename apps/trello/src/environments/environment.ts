@@ -1,9 +1,9 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
+import { AppConfig } from '@trello/libs/config';
 
-export const environment = {
+export const environment: AppConfig = {
   production: false,
+  apiUrl: 'http://localhost:4200/api',
+  defaultLanguage: 'en-US',
 };
 
 /*
