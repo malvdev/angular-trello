@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@trello/libs/welcome/feature-home": [
+        "libs/welcome/feature-home/src/index.ts"
+      ],
       "@trello/libs/config": ["libs/config/src/index.ts"]
     }
   },

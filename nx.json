@@ -36,6 +36,9 @@
     "trello-e2e": {
       "tags": [],
       "implicitDependencies": ["trello"]
+    },
+    "welcome-feature-home": {
+      "tags": []
     }
   }
 }
