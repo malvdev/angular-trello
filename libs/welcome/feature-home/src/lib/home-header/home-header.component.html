@@ -1,0 +1,22 @@
+<header class="app-home-header app-home-header_fixed">
+  <nav class="app-home-header__nav">
+    <a [routerLink]="['/']" href="#" class="app-home-header__logo">Trello</a>
+    <div class="app-home-header__actions">
+      <a
+        appSharedUiButton
+        appSharedUiButtonType="link"
+        [routerLink]="['/login']"
+        href="#"
+        >Log in</a
+      >
+      <a
+        appSharedUiButton
+        appSharedUiButtonType="primary"
+        [routerLink]="['/register']"
+        href="#"
+      >
+        Sign up
+      </a>
+    </div>
+  </nav>
+</header>
