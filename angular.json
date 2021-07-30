@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "projects": {
+    "trello": {
+      "projectType": "application",
+      "root": "apps/trello",
+      "sourceRoot": "apps/trello/src",
+      "prefix": "app-trello",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/trello",
+            "index": "apps/trello/src/index.html",
+            "main": "apps/trello/src/main.ts",
+            "polyfills": "apps/trello/src/polyfills.ts",
+            "tsConfig": "apps/trello/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": ["apps/trello/src/favicon.ico", "apps/trello/src/assets"],
+            "styles": ["apps/trello/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/trello/src/environments/environment.ts",
+                  "with": "apps/trello/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "trello:build:production"
+            },
+            "development": {
+              "browserTarget": "trello:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "trello:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/trello/src/**/*.ts",
+              "apps/trello/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/trello"],
+          "options": {
+            "jestConfig": "apps/trello/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "trello-e2e": {
+      "root": "apps/trello-e2e",
+      "sourceRoot": "apps/trello-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/trello-e2e/cypress.json",
+            "tsConfig": "apps/trello-e2e/tsconfig.e2e.json",
+            "devServerTarget": "trello:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "trello:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/trello-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
+  "defaultProject": "trello"
+}
