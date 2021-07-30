@@ -1,0 +1,12 @@
+.app-button_secondary {
+  background: var(--color-button-secondary);
+  color: var(--color-button-secondary-content);
+
+  &:hover {
+    background: var(--color-button-secondary-hover);
+  }
+
+  &:active {
+    background: var(--color-button-secondary-active);
+  }
+}
