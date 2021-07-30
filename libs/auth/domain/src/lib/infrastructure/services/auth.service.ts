@@ -4,6 +4,9 @@ import { Observable } from 'rxjs';
 import { ApiService, UserResponse } from '@trello/libs/shared/api';
 
 import {
+  ForgotUserEntity,
+  ForgotUserRequest,
+  ForgotUserResponse,
   LoginUserEntity,
   LoginUserRequest,
   RegisterUserEntity,
@@ -31,8 +34,10 @@ export class AuthService {
     });
   }
 
-  forgotPassword(credentials: RegisterUserEntity): Observable<UserResponse> {
-    return this._apiService.post<UserResponse, RegisterUserRequest>(
+  forgotPassword(
+    credentials: ForgotUserEntity
+  ): Observable<ForgotUserResponse> {
+    return this._apiService.post<ForgotUserResponse, ForgotUserRequest>(
       '/users/forgot',
       {
         user: credentials,

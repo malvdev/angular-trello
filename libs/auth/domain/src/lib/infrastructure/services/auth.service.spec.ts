@@ -1,7 +1,7 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { inject, TestBed } from '@angular/core/testing';
-import { APP_CONFIG } from '@trello/libs/config';
 
+import { APP_CONFIG } from '@trello/libs/config';
 import { ApiService } from '@trello/libs/shared/api';
 
 import { AuthService } from './auth.service';
