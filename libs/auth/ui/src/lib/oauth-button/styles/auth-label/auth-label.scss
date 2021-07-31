@@ -1,0 +1,11 @@
+.app-auth-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-s);
+  font-family: inherit;
+  font-weight: bold;
+  color: #505f79;
+  line-height: 2.3rem;
+}

@@ -1,0 +1,10 @@
+@import './styles/auth-label/auth-label.scss';
+
+:host {
+  display: block;
+}
+
+button {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px 0;
+}
