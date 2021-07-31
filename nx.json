@@ -30,6 +30,9 @@
     "auth-domain": {
       "tags": []
     },
+    "auth-feature-login": {
+      "tags": []
+    },
     "config": {
       "tags": []
     },

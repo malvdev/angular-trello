@@ -26,6 +26,31 @@
         }
       }
     },
+    "auth-feature-login": {
+      "projectType": "library",
+      "root": "libs/auth/feature-login",
+      "sourceRoot": "libs/auth/feature-login/src",
+      "prefix": "app-auth",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/auth/feature-login"],
+          "options": {
+            "jestConfig": "libs/auth/feature-login/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/auth/feature-login/src/**/*.ts",
+              "libs/auth/feature-login/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "config": {
       "projectType": "library",
       "root": "libs/config",
