@@ -1,0 +1,12 @@
+@import './__form/auth-template__form.scss';
+@import './__title/auth-template__title.scss';
+
+.app-auth-template {
+  padding: 0 0.5rem 2.2rem 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+
+  a {
+    text-decoration: none;
+  }
+}
