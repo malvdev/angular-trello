@@ -16,6 +16,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@trello/libs/shared/dynamic-form": [
+        "libs/shared/dynamic-form/src/index.ts"
+      ],
       "@trello/libs/auth/domain": ["libs/auth/domain/src/index.ts"],
       "@trello/libs/config": ["libs/config/src/index.ts"],
       "@trello/libs/shared/api": ["libs/shared/api/src/index.ts"],

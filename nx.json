@@ -36,6 +36,9 @@
     "shared-api": {
       "tags": []
     },
+    "shared-dynamic-form": {
+      "tags": []
+    },
     "shared-ui": {
       "tags": []
     },

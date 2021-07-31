@@ -76,6 +76,31 @@
         }
       }
     },
+    "shared-dynamic-form": {
+      "projectType": "library",
+      "root": "libs/shared/dynamic-form",
+      "sourceRoot": "libs/shared/dynamic-form/src",
+      "prefix": "app-shared-form",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/dynamic-form"],
+          "options": {
+            "jestConfig": "libs/shared/dynamic-form/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/dynamic-form/src/**/*.ts",
+              "libs/shared/dynamic-form/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-ui": {
       "projectType": "library",
       "root": "libs/shared/ui",
