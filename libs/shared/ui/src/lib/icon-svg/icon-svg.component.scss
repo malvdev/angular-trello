@@ -1,0 +1,22 @@
+:host {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+:host.app-icon-svg {
+  &-google {
+    background: url(./assets/svg/sign-in-with-google.svg) 0 50% no-repeat;
+  }
+
+  &-microsoft {
+    background: url(./assets/svg/microsoft-logo.svg) no-repeat 0 50%;
+    background-size: 100% 100%;
+  }
+
+  &-apple {
+    background: url(./assets/svg/apple-logo-black.svg) no-repeat 0 50%;
+    background-size: 100% 100%;
+  }
+}
