@@ -193,6 +193,9 @@
             "tsConfig": "apps/trello/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["apps/trello/src/favicon.ico", "apps/trello/src/assets"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["apps/trello/src/assets/styles"]
+            },
             "styles": ["apps/trello/src/styles.scss"],
             "scripts": []
           },
