@@ -1,0 +1,15 @@
+@import './styles/auth-links/auth-links.scss';
+@import './styles/auth-login-separator/auth-login-separator.scss';
+
+app-auth-oauth-button:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+button {
+  margin-top: 0.4rem;
+}
+
+app-dynamic-form-list-errors {
+  display: block;
+  margin-bottom: 0.8rem;
+}

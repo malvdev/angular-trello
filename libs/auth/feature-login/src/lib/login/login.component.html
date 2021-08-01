@@ -1,0 +1,35 @@
+<app-auth-template titleTemplate="Log in to Trello">
+  <app-dynamic-form-list-errors></app-dynamic-form-list-errors>
+  <app-dynamic-form
+    (updateForm)="updateForm($event)"
+    [data$]="data$"
+    [structure$]="structure$"
+  >
+  </app-dynamic-form>
+  <button
+    appUiButton
+    (click)="submit()"
+    type="submit"
+    [disabled]="(isValid$ | async) === false"
+  >
+    Sign in
+  </button>
+  <div class="app-auth-login-separator">OR</div>
+  <app-auth-oauth-button>
+    <app-ui-icon-svg icon="google"></app-ui-icon-svg>
+    Continue with Google
+  </app-auth-oauth-button>
+  <app-auth-oauth-button>
+    <app-ui-icon-svg icon="microsoft"></app-ui-icon-svg>
+    Continue with Microsoft
+  </app-auth-oauth-button>
+  <app-auth-oauth-button>
+    <app-ui-icon-svg icon="apple"></app-ui-icon-svg>
+    Continue with Apple
+  </app-auth-oauth-button>
+  <hr />
+  <div class="app-auth-links">
+    <a [routerLink]="['/forgot']" href="#">Can't log in?</a>
+    <a [routerLink]="['/register']" href="#">Sign up for an account</a>
+  </div>
+</app-auth-template>
