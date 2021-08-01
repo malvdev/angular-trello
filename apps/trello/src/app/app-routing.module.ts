@@ -16,6 +16,13 @@ const routes: Routes = [
         (m) => m.AuthFeatureRegisterModule
       ),
   },
+  {
+    path: '',
+    loadChildren: () =>
+      import('@trello/libs/auth/feature-forgot').then(
+        (m) => m.AuthFeatureForgotModule
+      ),
+  },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
