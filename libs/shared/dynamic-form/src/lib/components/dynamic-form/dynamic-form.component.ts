@@ -80,7 +80,7 @@ export class DynamicFormComponent implements OnInit, OnDestroy {
   };
 
   private control = (field: DynamicFieldEntity): FormControl => {
-    return this._formBuilder.control('', field.validator);
+    return this._formBuilder.control(field.defaultValue || '', field.validator);
   };
 
   private patchValue = ([form, data]: any) => {
