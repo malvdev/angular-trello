@@ -41,7 +41,8 @@ export class AuthEffects {
             of(
               setErrors({
                 errors: result.error.errors,
-              })
+              }),
+              AuthActions.loginFail(result.error.errors)
             )
           )
         )
@@ -55,7 +56,7 @@ export class AuthEffects {
         ofType(AuthActions.loginSuccess, AuthActions.registerSuccess),
         tap((action) => {
           this._credentialsService.setItem(action.user);
-          this._router.navigate(['/']);
+          this._router.navigate(['/boards']);
         })
       ),
     { dispatch: false }
@@ -70,7 +71,12 @@ export class AuthEffects {
           map((response) =>
             AuthActions.registerSuccess({ user: response.user })
           ),
-          catchError((result) => of(setErrors({ errors: result.error.errors })))
+          catchError((result) =>
+            of(
+              setErrors({ errors: result.error.errors }),
+              AuthActions.registerFail(result.error.errors)
+            )
+          )
         )
       )
     )
