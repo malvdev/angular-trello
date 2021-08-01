@@ -45,6 +45,9 @@
     "config": {
       "tags": []
     },
+    "profile-domain": {
+      "tags": []
+    },
     "shared-api": {
       "tags": []
     },

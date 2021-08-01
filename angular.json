@@ -151,6 +151,31 @@
         }
       }
     },
+    "profile-domain": {
+      "projectType": "library",
+      "root": "libs/profile/domain",
+      "sourceRoot": "libs/profile/domain/src",
+      "prefix": "app-profile",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/profile/domain"],
+          "options": {
+            "jestConfig": "libs/profile/domain/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/profile/domain/src/**/*.ts",
+              "libs/profile/domain/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-api": {
       "projectType": "library",
       "root": "libs/shared/api",

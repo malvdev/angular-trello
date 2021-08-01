@@ -16,10 +16,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@trello/libs/profile/domain": ["libs/profile/domain/src/index.ts"],
+      "@trello/libs/auth/domain": ["libs/auth/domain/src/index.ts"],
       "@trello/libs/auth/feature-forgot": [
         "libs/auth/feature-forgot/src/index.ts"
       ],
-      "@trello/libs/auth/domain": ["libs/auth/domain/src/index.ts"],
       "@trello/libs/auth/feature-login": [
         "libs/auth/feature-login/src/index.ts"
       ],
