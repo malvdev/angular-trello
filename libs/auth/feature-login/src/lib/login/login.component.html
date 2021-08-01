@@ -9,10 +9,12 @@
   <button
     appUiButton
     (click)="submit()"
+    [disabled]="
+      (isValid$ | async) === false || (status$ | async) === statusInProgress
+    "
     type="submit"
-    [disabled]="(isValid$ | async) === false"
   >
-    Sign in
+    {{ (status$ | async) === statusInProgress ? 'Waiting ...' : 'Sign in' }}
   </button>
   <div class="app-auth-login-separator">OR</div>
   <app-auth-oauth-button>

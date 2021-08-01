@@ -7,7 +7,7 @@ import {
 import { Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 
-import { AuthFacade } from '@trello/libs/auth/domain';
+import { AuthFacade, Status } from '@trello/libs/auth/domain';
 import {
   DynamicFieldEntity,
   DynamicFormFacade,
@@ -43,6 +43,11 @@ export class LoginComponent implements OnInit, OnDestroy {
   structure$: Observable<DynamicFieldEntity[]>;
   data$: Observable<any>;
   isValid$: Observable<boolean>;
+  status$: Observable<Status>;
+
+  get statusInProgress(): Status {
+    return Status.IN_PROGRESS;
+  }
 
   constructor(
     private readonly _dynamicFormFacade: DynamicFormFacade,
@@ -54,10 +59,11 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.data$ = this._dynamicFormFacade.data$;
     this.structure$ = this._dynamicFormFacade.structure$;
     this.isValid$ = this._dynamicFormFacade.valid$;
+    this.status$ = this._authFacade.status$;
   }
 
-  updateForm(changes: any): void {
-    this._dynamicFormFacade.updateData(changes.changes, changes.form.valid);
+  updateForm(data: any): void {
+    this._dynamicFormFacade.updateData(data.changes, data.form.valid);
   }
 
   submit(): void {
