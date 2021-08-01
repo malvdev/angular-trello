@@ -9,6 +9,13 @@ const routes: Routes = [
         (m) => m.WelcomeFeatureHomeModule
       ),
   },
+  {
+    path: '',
+    loadChildren: () =>
+      import('@trello/libs/auth/feature-register').then(
+        (m) => m.AuthFeatureRegisterModule
+      ),
+  },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 

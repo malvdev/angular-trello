@@ -6,13 +6,13 @@ import {
 } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 import { AuthFacade, Status } from '@trello/libs/auth/domain';
 import {
   DynamicFieldEntity,
   DynamicFormFacade,
 } from '@trello/libs/shared/dynamic-form';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-auth-register',
