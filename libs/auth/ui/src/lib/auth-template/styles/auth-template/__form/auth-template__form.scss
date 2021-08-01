@@ -1,9 +1,15 @@
+@import 'vars';
+
 .app-auth-template__form {
   position: relative;
   max-width: 585px;
   margin: 0 auto;
-  padding: 1.8rem 2.8rem;
+  padding: 1.8rem;
   border-radius: var(--border-radius-control);
   background-color: var(--color-white);
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
+
+  @media only screen and (min-width: $tablet-s) {
+    padding: 1.8rem 2.8rem;
+  }
 }
