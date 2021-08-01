@@ -1,0 +1,25 @@
+<app-auth-template titleTemplate="Can't log in?">
+  <app-dynamic-form-list-errors></app-dynamic-form-list-errors>
+  <app-dynamic-form
+    (updateForm)="updateForm($event)"
+    [data$]="data$"
+    [structure$]="structure$"
+  >
+  </app-dynamic-form>
+  <button
+    appUiButton
+    (click)="submit()"
+    [disabled]="
+      (isValid$ | async) === false || (status$ | async) === statusInProgress
+    "
+    type="submit"
+  >
+    {{
+      (status$ | async) === statusInProgress
+        ? 'Waiting ...'
+        : 'Send recovery link'
+    }}
+  </button>
+  <hr />
+  <a [routerLink]="['/login']" href="#">Return to log in</a>
+</app-auth-template>
