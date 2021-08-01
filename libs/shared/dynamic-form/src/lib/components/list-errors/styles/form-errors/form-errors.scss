@@ -1,0 +1,7 @@
+@import './__message/form-errors__message.scss';
+
+.app-form-errors {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}

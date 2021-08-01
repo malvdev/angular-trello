@@ -27,10 +27,22 @@
     ]
   },
   "projects": {
+    "auth-domain": {
+      "tags": []
+    },
+    "auth-feature-login": {
+      "tags": []
+    },
+    "auth-ui": {
+      "tags": []
+    },
     "config": {
       "tags": []
     },
     "shared-api": {
+      "tags": []
+    },
+    "shared-dynamic-form": {
       "tags": []
     },
     "shared-ui": {

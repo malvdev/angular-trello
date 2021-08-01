@@ -1,2 +1,3 @@
 export * from './lib/shared-api.module';
-export * from './lib/api.service';
+export * from './lib/entities';
+export * from './lib/infrastructure';

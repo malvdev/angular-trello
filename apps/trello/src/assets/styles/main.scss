@@ -83,6 +83,12 @@ button {
   }
 }
 
+fieldset {
+  padding: 0;
+  margin: 0 0 1.5em;
+  border: none;
+}
+
 input {
   width: 100%;
   line-height: normal;
@@ -91,7 +97,7 @@ input {
 textarea,
 input {
   display: block;
-  margin: 0 0 1.5em;
+  margin: 0;
   transition: border-color var(--transition), box-shadow var(--transition);
 }
 
@@ -146,7 +152,7 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px solid hsl(0, 0%, 80%);
-  margin: 1.8em 0 1em 0;
+  margin: 1.6em 0 1em 0;
   padding: 0;
 }
 
@@ -159,7 +165,7 @@ ul {
 
 label {
   display: block;
-  margin: 0 0 1em;
+  margin: 0;
   font-weight: var(--font-weight-normal);
   line-height: normal;
 }

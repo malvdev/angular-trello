@@ -1,0 +1,18 @@
+<form class="app-dynamic-form" [formGroup]="form">
+  <ng-container *ngFor="let field of structure$ | async">
+    <app-ui-form-field>
+      <ng-container
+        appDynamicFormField
+        [field]="field"
+        [group]="form"
+      ></ng-container>
+      <app-ui-form-field-error
+        *ngIf="
+          getFormField(field.name)?.touched && getFormField(field.name)?.invalid
+        "
+      >
+        Incorrect {{ field.name }}.
+      </app-ui-form-field-error>
+    </app-ui-form-field>
+  </ng-container>
+</form>

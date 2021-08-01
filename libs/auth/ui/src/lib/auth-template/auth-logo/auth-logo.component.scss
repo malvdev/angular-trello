@@ -1,0 +1,13 @@
+@import 'vars.scss';
+@import './styles/auth-logo/auth-logo.scss';
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto;
+
+  @media only screen and (max-width: $tablet-s) {
+    margin: 1rem auto;
+  }
+}

@@ -1,6 +1,81 @@
 {
   "version": 1,
   "projects": {
+    "auth-domain": {
+      "projectType": "library",
+      "root": "libs/auth/domain",
+      "sourceRoot": "libs/auth/domain/src",
+      "prefix": "app-auth",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/auth/domain"],
+          "options": {
+            "jestConfig": "libs/auth/domain/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/auth/domain/src/**/*.ts",
+              "libs/auth/domain/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "auth-feature-login": {
+      "projectType": "library",
+      "root": "libs/auth/feature-login",
+      "sourceRoot": "libs/auth/feature-login/src",
+      "prefix": "app-auth",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/auth/feature-login"],
+          "options": {
+            "jestConfig": "libs/auth/feature-login/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/auth/feature-login/src/**/*.ts",
+              "libs/auth/feature-login/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "auth-ui": {
+      "projectType": "library",
+      "root": "libs/auth/ui",
+      "sourceRoot": "libs/auth/ui/src",
+      "prefix": "app-auth",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/auth/ui"],
+          "options": {
+            "jestConfig": "libs/auth/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/auth/ui/src/**/*.ts",
+              "libs/auth/ui/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "config": {
       "projectType": "library",
       "root": "libs/config",
@@ -51,6 +126,31 @@
         }
       }
     },
+    "shared-dynamic-form": {
+      "projectType": "library",
+      "root": "libs/shared/dynamic-form",
+      "sourceRoot": "libs/shared/dynamic-form/src",
+      "prefix": "app-shared-form",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/dynamic-form"],
+          "options": {
+            "jestConfig": "libs/shared/dynamic-form/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/dynamic-form/src/**/*.ts",
+              "libs/shared/dynamic-form/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-ui": {
       "projectType": "library",
       "root": "libs/shared/ui",
@@ -93,6 +193,9 @@
             "tsConfig": "apps/trello/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["apps/trello/src/favicon.ico", "apps/trello/src/assets"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["apps/trello/src/assets/styles"]
+            },
             "styles": ["apps/trello/src/styles.scss"],
             "scripts": []
           },
