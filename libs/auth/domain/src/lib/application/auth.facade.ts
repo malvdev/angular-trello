@@ -24,6 +24,10 @@ export class AuthFacade {
     this._store.dispatch(AuthActions.register());
   }
 
+  forgot(): void {
+    this._store.dispatch(AuthActions.forgot());
+  }
+
   user(): void {
     this._store.dispatch(AuthActions.getUser());
   }

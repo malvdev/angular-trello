@@ -6,18 +6,19 @@ import { SharedDynamicFormModule } from '@trello/libs/shared/dynamic-form';
 import { AuthTemplateModule } from '@trello/libs/auth/ui';
 import { ButtonModule } from '@trello/libs/shared/ui';
 
-import { AuthFeatureRegisterRoutingModule } from './auth-feature-register-routing.module';
-import { RegisterComponent } from './register/register.component';
+import { ForgotComponent } from './forgot/forgot.component';
+import { AuthFeatureForgotRoutingModule } from './auth-feature-forgot-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
+    AuthFeatureForgotRoutingModule,
     SharedDynamicFormModule,
     AuthTemplateModule,
     ButtonModule,
-    AuthFeatureRegisterRoutingModule,
   ],
-  declarations: [RegisterComponent],
+  declarations: [ForgotComponent],
+  exports: [ForgotComponent],
 })
-export class AuthFeatureRegisterModule {}
+export class AuthFeatureForgotModule {}

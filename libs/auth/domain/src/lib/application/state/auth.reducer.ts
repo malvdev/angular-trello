@@ -61,6 +61,14 @@ const reducer = createReducer(
     ...state,
     status: Status.INIT,
   })),
+  on(AuthActions.forgot, (state) => ({
+    ...state,
+    status: Status.IN_PROGRESS,
+  })),
+  on(AuthActions.forgotSuccess, AuthActions.forgotFail, (state) => ({
+    ...state,
+    status: Status.INIT,
+  })),
   on(AuthActions.logout, () => ({
     ...authInitialState,
   }))

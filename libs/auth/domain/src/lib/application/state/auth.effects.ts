@@ -82,6 +82,26 @@ export class AuthEffects {
     )
   );
 
+  forgot$ = createEffect(() =>
+    this._actions$.pipe(
+      ofType(AuthActions.forgot),
+      withLatestFrom(this._dynamicFormFacade.data$),
+      exhaustMap(([action, data]) =>
+        this._authService.forgotPassword(data).pipe(
+          map((response) =>
+            AuthActions.forgotSuccess({ status: response.status })
+          ),
+          catchError((result) =>
+            of(
+              setErrors({ errors: result.error.errors }),
+              AuthActions.forgotFail(result.error.errors)
+            )
+          )
+        )
+      )
+    )
+  );
+
   logout$ = createEffect(
     () =>
       this._actions$.pipe(
