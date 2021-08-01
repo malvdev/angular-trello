@@ -1,6 +1,8 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 import {
   AuthGuard,
@@ -10,11 +12,23 @@ import {
   AuthInterceptor,
   ErrorHandlerInterceptor,
 } from './infrastructure';
+import {
+  AuthFacade,
+  AuthEffects,
+  authReducer,
+  AUTH_FEATURE_KEY,
+} from './application';
 
 @NgModule({
-  imports: [CommonModule, StoragesModule],
+  imports: [
+    CommonModule,
+    StoragesModule,
+    StoreModule.forFeature(AUTH_FEATURE_KEY, authReducer),
+    EffectsModule.forFeature([AuthEffects]),
+  ],
   providers: [
     AuthService,
+    AuthFacade,
     CredentialsService,
     AuthGuard,
     {
