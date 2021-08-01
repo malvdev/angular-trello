@@ -10,4 +10,4 @@ const routes: Routes = [{ path: 'register', component: RegisterComponent }];
   exports: [RouterModule],
   providers: [],
 })
-export class RegisterRoutingModule {}
+export class AuthFeatureRegisterRoutingModule {}

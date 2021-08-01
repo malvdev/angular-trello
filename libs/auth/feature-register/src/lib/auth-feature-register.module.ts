@@ -6,7 +6,7 @@ import { SharedDynamicFormModule } from '@trello/libs/shared/dynamic-form';
 import { AuthTemplateModule } from '@trello/libs/auth/ui';
 import { ButtonModule } from '@trello/libs/shared/ui';
 
-import { RegisterRoutingModule } from './auth-feature-register-routing.module';
+import { AuthFeatureRegisterRoutingModule } from './auth-feature-register-routing.module';
 import { RegisterComponent } from './register/register.component';
 
 @NgModule({
@@ -16,7 +16,7 @@ import { RegisterComponent } from './register/register.component';
     SharedDynamicFormModule,
     AuthTemplateModule,
     ButtonModule,
-    RegisterRoutingModule,
+    AuthFeatureRegisterRoutingModule,
   ],
   declarations: [RegisterComponent],
 })
