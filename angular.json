@@ -176,6 +176,31 @@
         }
       }
     },
+    "profile-feature-profile": {
+      "projectType": "library",
+      "root": "libs/profile/feature-profile",
+      "sourceRoot": "libs/profile/feature-profile/src",
+      "prefix": "app-profile",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/profile/feature-profile"],
+          "options": {
+            "jestConfig": "libs/profile/feature-profile/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/profile/feature-profile/src/**/*.ts",
+              "libs/profile/feature-profile/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-api": {
       "projectType": "library",
       "root": "libs/shared/api",
