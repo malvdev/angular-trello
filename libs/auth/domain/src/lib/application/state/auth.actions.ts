@@ -38,4 +38,16 @@ export const registerFail = createAction(
   props<{ error: Error }>()
 );
 
+export const forgot = createAction('[auth] FORGOT');
+
+export const forgotSuccess = createAction(
+  '[auth] FORGOT_SUCCESS',
+  props<{ status: string }>()
+);
+
+export const forgotFail = createAction(
+  '[auth] FORGOT_FAIL',
+  props<{ error: Error }>()
+);
+
 export const logout = createAction('[auth] LOGOUT');

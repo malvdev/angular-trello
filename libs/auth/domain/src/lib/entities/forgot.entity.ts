@@ -7,5 +7,5 @@ export interface ForgotUserRequest {
 }
 
 export interface ForgotUserResponse {
-  status: boolean;
+  status: string;
 }
