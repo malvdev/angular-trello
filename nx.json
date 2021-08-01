@@ -33,6 +33,9 @@
     "auth-feature-login": {
       "tags": []
     },
+    "auth-feature-register": {
+      "tags": []
+    },
     "auth-ui": {
       "tags": []
     },
