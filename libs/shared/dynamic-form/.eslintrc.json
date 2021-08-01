@@ -13,7 +13,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "appSharedForm",
+            "prefix": "appDynamicForm",
             "style": "camelCase"
           }
         ],
@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "app-shared-form",
+            "prefix": "app-dynamic-form",
             "style": "kebab-case"
           }
         ]

@@ -1,0 +1,11 @@
+<fieldset [formGroup]="group" class="app-form-group">
+  <label>
+    <span class="app-form-group__label">{{ field?.label }}</span>
+    <input
+      [formControlName]="field?.name || null"
+      [attr.placeholder]="field?.placeholder"
+      [attr.type]="field?.attrs?.type || 'text'"
+      class="app-form-group__control"
+    />
+  </label>
+</fieldset>
