@@ -1,0 +1,21 @@
+<app-auth-template titleTemplate="Sign up for your account">
+  <app-dynamic-form-list-errors></app-dynamic-form-list-errors>
+  <app-dynamic-form
+    (updateForm)="updateForm($event)"
+    [data$]="data$"
+    [structure$]="structure$"
+  >
+  </app-dynamic-form>
+  <button
+    appUiButton
+    (click)="submit()"
+    [disabled]="
+      (isValid$ | async) === false || (status$ | async) === statusInProgress
+    "
+    type="submit"
+  >
+    {{ (status$ | async) === statusInProgress ? 'Waiting ...' : 'Continue' }}
+  </button>
+  <hr />
+  <a [routerLink]="['/login']" href="#">Already have an account? Log In</a>
+</app-auth-template>

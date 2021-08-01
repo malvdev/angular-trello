@@ -1,6 +1,8 @@
 <fieldset [formGroup]="group" class="app-form-group">
   <label>
-    <span class="app-form-group__label">{{ field?.label }}</span>
+    <span *ngIf="field?.label" class="app-form-group__label">
+      {{ field?.label }}
+    </span>
     <textarea
       [attr.rows]="field?.attrs?.rows || 5"
       [formControlName]="field?.name || null"
