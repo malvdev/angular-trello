@@ -8,6 +8,7 @@ export class AuthFacade {
   auth$ = this._store.select(authQuery.getAuth);
   user$ = this._store.select(authQuery.getUser);
   isLoggedIn$ = this._store.select(authQuery.getLoggedIn);
+  status$ = this._store.select(authQuery.getStatus);
 
   constructor(private readonly _store: Store<AuthState>) {}
 
