@@ -51,6 +51,9 @@
     "board-feature-boards": {
       "tags": []
     },
+    "board-ui": {
+      "tags": []
+    },
     "config": {
       "tags": []
     },
