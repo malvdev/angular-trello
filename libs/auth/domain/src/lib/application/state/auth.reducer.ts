@@ -1,7 +1,6 @@
 import { createReducer, on, Action } from '@ngrx/store';
 
-import { UserEntity } from '@trello/libs/shared/api';
-
+import { UserEntity } from '../../entities';
 import * as AuthActions from './auth.actions';
 
 export const AUTH_FEATURE_KEY = 'auth';
@@ -25,9 +24,9 @@ export const authInitialState: AuthState = {
   loggedIn: false,
   status: Status.INIT,
   user: {
-    id: '',
-    username: '',
-    email: '',
+    id: '222',
+    username: 'testusername',
+    email: 'email@tet.com',
     accessToken: '',
     refreshToken: '',
   },

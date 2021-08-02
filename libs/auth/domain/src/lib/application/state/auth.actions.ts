@@ -1,6 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 
-import { UserEntity } from '@trello/libs/shared/api';
+import { UserEntity } from '../../entities';
 
 export const getUser = createAction('[auth] GET_USER');
 
