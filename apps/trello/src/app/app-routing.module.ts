@@ -23,6 +23,13 @@ const routes: Routes = [
         (m) => m.AuthFeatureForgotModule
       ),
   },
+  {
+    path: '',
+    loadChildren: () =>
+      import('@trello/libs/profile/feature-profile').then(
+        (m) => m.FeatureProfileModule
+      ),
+  },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
