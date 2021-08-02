@@ -45,6 +45,15 @@
     "config": {
       "tags": []
     },
+    "profile-domain": {
+      "tags": []
+    },
+    "profile-feature-profile": {
+      "tags": []
+    },
+    "profile-ui": {
+      "tags": []
+    },
     "shared-api": {
       "tags": []
     },

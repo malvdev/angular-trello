@@ -1,0 +1,11 @@
+<ul class="app-tabs" *ngIf="tabs.length">
+  <li class="app-tabs__tab-container" *ngFor="let tab of tabs">
+    <a
+      [routerLink]="tab.link"
+      routerLinkActive="app-tabs__tab_active"
+      href="#"
+      class="app-tabs__tab"
+      >{{ tab.name }}</a
+    >
+  </li>
+</ul>

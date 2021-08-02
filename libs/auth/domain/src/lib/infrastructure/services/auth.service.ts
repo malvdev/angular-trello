@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { ApiService, UserResponse } from '@trello/libs/shared/api';
+import { ApiService } from '@trello/libs/shared/api';
 
 import {
+  UserResponse,
   ForgotUserEntity,
   ForgotUserRequest,
   ForgotUserResponse,

@@ -1,0 +1,11 @@
+@import './styles/main-container/main-container.scss';
+@import './styles/main-content/main-content.scss';
+@import './styles/main-surface/main-surface.scss';
+
+:host {
+  position: relative;
+  display: block;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}

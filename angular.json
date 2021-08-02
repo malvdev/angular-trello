@@ -151,6 +151,81 @@
         }
       }
     },
+    "profile-domain": {
+      "projectType": "library",
+      "root": "libs/profile/domain",
+      "sourceRoot": "libs/profile/domain/src",
+      "prefix": "app-profile",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/profile/domain"],
+          "options": {
+            "jestConfig": "libs/profile/domain/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/profile/domain/src/**/*.ts",
+              "libs/profile/domain/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "profile-feature-profile": {
+      "projectType": "library",
+      "root": "libs/profile/feature-profile",
+      "sourceRoot": "libs/profile/feature-profile/src",
+      "prefix": "app-profile",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/profile/feature-profile"],
+          "options": {
+            "jestConfig": "libs/profile/feature-profile/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/profile/feature-profile/src/**/*.ts",
+              "libs/profile/feature-profile/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "profile-ui": {
+      "projectType": "library",
+      "root": "libs/profile/ui",
+      "sourceRoot": "libs/profile/ui/src",
+      "prefix": "angular-trello",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/profile/ui"],
+          "options": {
+            "jestConfig": "libs/profile/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/profile/ui/src/**/*.ts",
+              "libs/profile/ui/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-api": {
       "projectType": "library",
       "root": "libs/shared/api",

@@ -1,0 +1,15 @@
+@import 'vars.scss';
+
+.app-profile-header__container {
+  display: flex;
+  align-items: flex-end;
+  max-width: 730px;
+  margin: 0 auto;
+  padding: 3rem 1.2rem 0 1.2rem;
+  overflow-x: auto;
+
+  @media screen and (min-width: $tablet-s) {
+    min-height: 100px;
+    justify-content: center;
+  }
+}
