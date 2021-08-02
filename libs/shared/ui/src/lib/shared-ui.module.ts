@@ -9,6 +9,7 @@ import { NavTabsModule } from './nav-tabs';
 import { InitialsModule } from './initials';
 import { AvatarModule } from './avatar';
 import { SearchInputModule } from './search-input';
+import { NotificationsSheetModule } from './notifications-sheet';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { SearchInputModule } from './search-input';
     InitialsModule,
     AvatarModule,
     SearchInputModule,
+    NotificationsSheetModule,
   ],
 })
 export class SharedUiModule {}

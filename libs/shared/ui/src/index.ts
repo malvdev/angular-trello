@@ -7,3 +7,4 @@ export * from './lib/nav-tabs';
 export * from './lib/initials';
 export * from './lib/avatar';
 export * from './lib/search-input';
+export * from './lib/notifications-sheet';
