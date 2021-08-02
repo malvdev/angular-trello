@@ -51,6 +51,9 @@
     "profile-feature-profile": {
       "tags": []
     },
+    "profile-ui": {
+      "tags": []
+    },
     "shared-api": {
       "tags": []
     },

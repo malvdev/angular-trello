@@ -201,6 +201,31 @@
         }
       }
     },
+    "profile-ui": {
+      "projectType": "library",
+      "root": "libs/profile/ui",
+      "sourceRoot": "libs/profile/ui/src",
+      "prefix": "angular-trello",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/profile/ui"],
+          "options": {
+            "jestConfig": "libs/profile/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/profile/ui/src/**/*.ts",
+              "libs/profile/ui/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-api": {
       "projectType": "library",
       "root": "libs/shared/api",
