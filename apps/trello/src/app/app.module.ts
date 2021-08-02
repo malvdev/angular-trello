@@ -5,6 +5,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { APP_CONFIG } from '@trello/libs/config';
 import { SharedApiModule } from '@trello/libs/shared/api';
@@ -20,6 +21,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     RouterModule,
+    BrowserAnimationsModule,
     SharedApiModule,
     AuthDomainModule,
     StoreModule.forRoot(
