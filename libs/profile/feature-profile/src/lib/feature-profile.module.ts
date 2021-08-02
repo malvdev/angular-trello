@@ -7,13 +7,16 @@ import {
   ButtonModule,
   FormFieldModule,
   MainTemplateModule,
-  NavTabsModule,
 } from '@trello/libs/shared/ui';
 import { ProfileDomainModule } from '@trello/libs/profile/domain';
-import { ProfileHeaderModule } from '@trello/libs/profile/ui';
+import {
+  ProfileHeaderModule,
+  ProfileWrapperModule,
+} from '@trello/libs/profile/ui';
 
 import { ProfileFeatureRoutingModule } from './profile-feature-routing.module';
 import { ProfileComponent } from './profile/profile.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   imports: [
@@ -23,11 +26,11 @@ import { ProfileComponent } from './profile/profile.component';
     RouterModule,
     ReactiveFormsModule,
     ProfileHeaderModule,
+    ProfileWrapperModule,
     ButtonModule,
     FormFieldModule,
     MainTemplateModule,
-    NavTabsModule,
   ],
-  declarations: [ProfileComponent],
+  declarations: [ProfileComponent, SettingsComponent],
 })
 export class FeatureProfileModule {}

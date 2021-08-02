@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
+import { HeaderModule } from '../header';
 import { MainTemplateComponent } from './main-template.component';
 
 describe('MainTemplateComponent', () => {
@@ -8,6 +10,7 @@ describe('MainTemplateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [RouterTestingModule, HeaderModule],
       declarations: [MainTemplateComponent],
     }).compileComponents();
   });

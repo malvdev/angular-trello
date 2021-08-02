@@ -22,7 +22,7 @@
     [matMenuTriggerFor]="menuProfile"
     class="app-buttom-profile"
   >
-    <app-ui-avatar [avatar]="(currentUser$ | async)"></app-ui-avatar>
+    <app-ui-avatar [avatar]="avatar"></app-ui-avatar>
   </button>
   <mat-menu #menuProfile="matMenu">
     <button [routerLink]="['/profile']" mat-menu-item>

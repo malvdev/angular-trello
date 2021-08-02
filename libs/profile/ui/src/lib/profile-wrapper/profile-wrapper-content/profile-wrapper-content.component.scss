@@ -1,6 +1,6 @@
 @import 'vars.scss';
 
-.app-profile__content {
+:host {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;

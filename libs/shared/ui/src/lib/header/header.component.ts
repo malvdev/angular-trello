@@ -1,8 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
-
-import { AuthFacade, UserEntity } from '@trello/libs/auth/domain';
-import { Observable } from 'rxjs';
 
 import { Avatar } from '../avatar';
 import { NotificationsSheetComponent } from '../notifications-sheet';
@@ -12,26 +9,18 @@ import { NotificationsSheetComponent } from '../notifications-sheet';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
-  currentUser$: Observable<UserEntity>;
+export class HeaderComponent {
   avatar: Avatar = {
     username: 'Default',
   };
 
-  constructor(
-    private readonly _authFacade: AuthFacade,
-    private readonly _bottomSheet: MatBottomSheet
-  ) {}
-
-  ngOnInit(): void {
-    this.currentUser$ = this._authFacade.user$;
-  }
+  constructor(private readonly _bottomSheet: MatBottomSheet) {}
 
   openNotificationsSheet(): void {
     this._bottomSheet.open(NotificationsSheetComponent);
   }
 
   logout(): void {
-    this._authFacade.logout();
+    console.log('Logout');
   }
 }
