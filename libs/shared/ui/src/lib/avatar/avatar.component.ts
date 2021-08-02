@@ -1,9 +1,9 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
-export type Avatar = {
-  name: string;
-  url?: string;
-};
+export interface Avatar {
+  username: string;
+  avatar?: string;
+}
 
 @Component({
   selector: 'app-ui-avatar',
@@ -13,5 +13,5 @@ export type Avatar = {
 })
 export class AvatarComponent {
   @Input()
-  avatar: Avatar;
+  avatar: Avatar | null;
 }
