@@ -45,6 +45,9 @@
     "board-domain": {
       "tags": []
     },
+    "board-feature-boards": {
+      "tags": []
+    },
     "config": {
       "tags": []
     },
