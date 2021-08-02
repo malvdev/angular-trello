@@ -1,0 +1,9 @@
+@import './__tab-container/tabs__tab-container.scss';
+@import './__tab/tabs__tab.scss';
+
+.app-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
