@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { ListBoardsModule } from './list-boards';
+
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, ListBoardsModule],
 })
 export class BoardUiModule {}

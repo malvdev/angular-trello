@@ -1,0 +1,8 @@
+.app-boards__header-name {
+  display: inline-block;
+  margin: 0;
+  font-weight: var(--font-weight-bold);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
