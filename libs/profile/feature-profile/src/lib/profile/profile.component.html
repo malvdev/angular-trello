@@ -1,0 +1,115 @@
+<app-ui-main-template>
+  <div class="app-profile">
+    <app-profile-header></app-profile-header>
+    <div class="app-profile__content">
+      <div class="app-profile__group">
+        <h3 class="app-profile__group-title">Profile</h3>
+        <form
+          [formGroup]="profileForm"
+          (ngSubmit)="onProfileSubmit()"
+          class="app-profile__form"
+        >
+          <app-ui-form-field>
+            <fieldset>
+              <label for="username">Username</label>
+              <input
+                formControlName="username"
+                id="username"
+                type="text"
+                name="username"
+                placeholder="Username"
+              />
+            </fieldset>
+            <app-ui-form-field-error
+              *ngIf="username && username.touched && username.invalid"
+            >
+              Please provide a username.
+            </app-ui-form-field-error>
+          </app-ui-form-field>
+          <app-ui-form-field>
+            <fieldset>
+              <label for="email">Email</label>
+              <input
+                formControlName="email"
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Email"
+              />
+            </fieldset>
+            <app-ui-form-field-error
+              *ngIf="email && email.touched && email.invalid"
+            >
+              Incorrect email address.
+            </app-ui-form-field-error>
+          </app-ui-form-field>
+          <button appUiButton [disabled]="profileForm.invalid">
+            Update Profile
+          </button>
+        </form>
+      </div>
+
+      <div class="app-profile__group">
+        <h3 class="app-profile__group-title">Password</h3>
+        <form
+          [formGroup]="passwordForm"
+          (ngSubmit)="onPasswordSubmit()"
+          class="app-profile__form"
+        >
+          <app-ui-form-field>
+            <fieldset>
+              <label for="password">Current Password</label>
+              <input
+                formControlName="password"
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Enter your current password"
+              />
+            </fieldset>
+            <app-ui-form-field-error
+              *ngIf="password && password.touched && password.invalid"
+            >
+              Password must be 8 or more characters.
+            </app-ui-form-field-error>
+          </app-ui-form-field>
+          <app-ui-form-field>
+            <fieldset>
+              <label for="passwordNew">New Password</label>
+              <input
+                formControlName="passwordNew"
+                id="passwordNew"
+                type="password"
+                name="passwordNew"
+                placeholder="Enter a new password"
+              />
+            </fieldset>
+            <app-ui-form-field-error
+              *ngIf="passwordNew && passwordNew.touched && passwordNew.invalid"
+            >
+              Password must be 8 or more characters.
+            </app-ui-form-field-error>
+          </app-ui-form-field>
+          <app-ui-form-field>
+            <fieldset>
+              <label for="passwordConfirm">Confirm New Password</label>
+              <input
+                formControlName="passwordConfirm"
+                id="passwordConfirm"
+                type="password"
+                name="passwordConfirm"
+                placeholder="Enter a new password again"
+              />
+            </fieldset>
+            <app-ui-form-field-error *ngIf="passwordForm.hasError('mismatch')">
+              Passwords don't match.
+            </app-ui-form-field-error>
+          </app-ui-form-field>
+          <button appUiButton [disabled]="passwordForm.invalid">
+            Update Password
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</app-ui-main-template>
