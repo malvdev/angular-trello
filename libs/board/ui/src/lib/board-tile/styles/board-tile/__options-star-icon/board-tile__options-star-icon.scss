@@ -1,0 +1,17 @@
+.app-board-tile__options-star-icon {
+  display: block;
+  width: 0;
+  height: 19px;
+  font-size: 1rem;
+  line-height: 19px;
+  opacity: 0;
+  transition-duration: 0.15s;
+  transition-property: color, background-color, opacity, transform, width,
+    margin;
+
+  &.app-is-starred {
+    color: var(--color-yellow-30-flat);
+    opacity: 1;
+    width: 19px;
+  }
+}

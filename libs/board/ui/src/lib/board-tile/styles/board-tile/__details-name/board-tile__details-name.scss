@@ -1,0 +1,12 @@
+.app-board-tile__details-name {
+  display: -webkit-box;
+  width: 100%;
+  max-height: 3rem;
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  overflow: hidden;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
