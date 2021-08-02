@@ -151,6 +151,31 @@
         }
       }
     },
+    "board-feature-board": {
+      "projectType": "library",
+      "root": "libs/board/feature-board",
+      "sourceRoot": "libs/board/feature-board/src",
+      "prefix": "app-board",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/board/feature-board"],
+          "options": {
+            "jestConfig": "libs/board/feature-board/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/board/feature-board/src/**/*.ts",
+              "libs/board/feature-board/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "board-feature-boards": {
       "projectType": "library",
       "root": "libs/board/feature-boards",
