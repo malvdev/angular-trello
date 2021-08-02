@@ -42,6 +42,9 @@
     "auth-ui": {
       "tags": []
     },
+    "board-domain": {
+      "tags": []
+    },
     "config": {
       "tags": []
     },

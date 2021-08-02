@@ -16,7 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@trello/libs/profile/ui": ["libs/profile/ui/src/index.ts"],
+      "@trello/libs/board/domain": ["libs/board/domain/src/index.ts"],
       "@trello/libs/auth/domain": ["libs/auth/domain/src/index.ts"],
       "@trello/libs/auth/feature-forgot": [
         "libs/auth/feature-forgot/src/index.ts"
@@ -33,6 +33,7 @@
       "@trello/libs/profile/feature-profile": [
         "libs/profile/feature-profile/src/index.ts"
       ],
+      "@trello/libs/profile/ui": ["libs/profile/ui/src/index.ts"],
       "@trello/libs/shared/api": ["libs/shared/api/src/index.ts"],
       "@trello/libs/shared/dynamic-form": [
         "libs/shared/dynamic-form/src/index.ts"

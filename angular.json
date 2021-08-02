@@ -126,6 +126,31 @@
         }
       }
     },
+    "board-domain": {
+      "projectType": "library",
+      "root": "libs/board/domain",
+      "sourceRoot": "libs/board/domain/src",
+      "prefix": "app-board",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/board/domain"],
+          "options": {
+            "jestConfig": "libs/board/domain/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/board/domain/src/**/*.ts",
+              "libs/board/domain/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "config": {
       "projectType": "library",
       "root": "libs/config",
