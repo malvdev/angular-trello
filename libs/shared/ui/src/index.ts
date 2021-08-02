@@ -9,3 +9,4 @@ export * from './lib/avatar';
 export * from './lib/search-input';
 export * from './lib/notifications-sheet';
 export * from './lib/header';
+export * from './lib/menu';

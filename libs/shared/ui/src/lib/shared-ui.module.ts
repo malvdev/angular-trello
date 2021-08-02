@@ -11,6 +11,7 @@ import { AvatarModule } from './avatar';
 import { SearchInputModule } from './search-input';
 import { HeaderModule } from './header';
 import { NotificationsSheetModule } from './notifications-sheet';
+import { MenuModule } from './menu';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { NotificationsSheetModule } from './notifications-sheet';
     SearchInputModule,
     NotificationsSheetModule,
     HeaderModule,
+    MenuModule,
   ],
 })
 export class SharedUiModule {}

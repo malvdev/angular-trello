@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  align-items: center;
+  min-height: 1.5rem;
+  padding: 0.4rem 0.5rem;
+  margin: 0 0 0.4rem;
+  background-color: transparent;
+  border-radius: var(--border-radius-control);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  transition-property: background-color, border-color, box-shadow;
+  transition-duration: 85ms;
+  transition-timing-function: ease;
+  box-shadow: none;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-dark-indigo-20-flat);
+  }
+
+  &:active {
+    background-color: var(--color-dark-indigo-15-flat);
+  }
+
+  &._active {
+    background-color: #e4f0f6;
+    color: var(--color-accent);
+  }
+}
