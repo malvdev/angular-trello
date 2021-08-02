@@ -24,9 +24,9 @@ export const authInitialState: AuthState = {
   loggedIn: false,
   status: Status.INIT,
   user: {
-    id: '222',
-    username: 'testusername',
-    email: 'email@tet.com',
+    id: '',
+    username: '',
+    email: '',
     accessToken: '',
     refreshToken: '',
   },
