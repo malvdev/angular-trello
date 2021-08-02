@@ -9,6 +9,7 @@ import { NavTabsModule } from './nav-tabs';
 import { InitialsModule } from './initials';
 import { AvatarModule } from './avatar';
 import { SearchInputModule } from './search-input';
+import { HeaderModule } from './header';
 import { NotificationsSheetModule } from './notifications-sheet';
 
 @NgModule({
@@ -23,6 +24,7 @@ import { NotificationsSheetModule } from './notifications-sheet';
     AvatarModule,
     SearchInputModule,
     NotificationsSheetModule,
+    HeaderModule,
   ],
 })
 export class SharedUiModule {}

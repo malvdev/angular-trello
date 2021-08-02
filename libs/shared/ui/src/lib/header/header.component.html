@@ -1,0 +1,37 @@
+<div class="app-header-nav">
+  <button appUiButton appUiButtonType="third" [routerLink]="['/boards']">
+    <mat-icon>home</mat-icon>
+  </button>
+  <app-ui-search-input></app-ui-search-input>
+</div>
+<a [routerLink]="['/']" class="app-header-logo">Trello</a>
+<div class="app-header-info">
+  <button appUiButton appUiButtonType="third">
+    <mat-icon>add</mat-icon>
+  </button>
+  <button
+    appUiButton
+    appUiButtonType="third"
+    (click)="openNotificationsSheet()"
+  >
+    <mat-icon>notifications</mat-icon>
+  </button>
+  <button
+    appUiButton
+    appUiButtonType="third"
+    [matMenuTriggerFor]="menuProfile"
+    class="app-buttom-profile"
+  >
+    <app-ui-avatar [avatar]="(currentUser$ | async)"></app-ui-avatar>
+  </button>
+  <mat-menu #menuProfile="matMenu">
+    <button [routerLink]="['/profile']" mat-menu-item>
+      <mat-icon>person</mat-icon>
+      Profile
+    </button>
+    <button (click)="logout()" mat-menu-item>
+      <mat-icon>logout</mat-icon>
+      Logout
+    </button>
+  </mat-menu>
+</div>
