@@ -321,7 +321,10 @@
             "stylePreprocessorOptions": {
               "includePaths": ["apps/trello/src/assets/styles"]
             },
-            "styles": ["apps/trello/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/trello/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {

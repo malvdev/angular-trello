@@ -1,0 +1,16 @@
+@import './styles/buttom-profile/buttom-profile.scss';
+@import './styles/header-info/header-info.scss';
+@import './styles/header-logo/header-logo.scss';
+@import './styles/header-nav/header-nav.scss';
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 3rem;
+  max-height: 3rem;
+  padding: 0.3rem;
+  background-color: var(--color-accent);
+  box-sizing: border-box;
+  overflow: hidden;
+}

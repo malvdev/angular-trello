@@ -1,0 +1,17 @@
+<ng-container *ngIf="avatar">
+  <span
+    [title]="avatar.username"
+    [attr.aria-label]="avatar.username"
+    class="app-avatar"
+  >
+    {{ avatar.username | appUiInitials }}
+    <img
+      *ngIf="avatar.avatar"
+      [src]="avatar.avatar"
+      [alt]="avatar.username"
+      class="app-avatar__img"
+      height="32"
+      width="32"
+    />
+  </span>
+</ng-container>

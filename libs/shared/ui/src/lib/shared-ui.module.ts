@@ -6,6 +6,11 @@ import { FormFieldModule } from './form-field';
 import { IconSvgModule } from './icon-svg';
 import { MainTemplateModule } from './main-template';
 import { NavTabsModule } from './nav-tabs';
+import { InitialsModule } from './initials';
+import { AvatarModule } from './avatar';
+import { SearchInputModule } from './search-input';
+import { HeaderModule } from './header';
+import { NotificationsSheetModule } from './notifications-sheet';
 
 @NgModule({
   imports: [
@@ -15,6 +20,11 @@ import { NavTabsModule } from './nav-tabs';
     IconSvgModule,
     MainTemplateModule,
     NavTabsModule,
+    InitialsModule,
+    AvatarModule,
+    SearchInputModule,
+    NotificationsSheetModule,
+    HeaderModule,
   ],
 })
 export class SharedUiModule {}
