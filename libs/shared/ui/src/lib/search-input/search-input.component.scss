@@ -1,0 +1,8 @@
+@import './styles/search-button/search-button.scss';
+@import './styles/search-input/search-input.scss';
+
+:host {
+  position: relative;
+  display: flex;
+  align-items: center;
+}

@@ -8,6 +8,7 @@ import { MainTemplateModule } from './main-template';
 import { NavTabsModule } from './nav-tabs';
 import { InitialsModule } from './initials';
 import { AvatarModule } from './avatar';
+import { SearchInputModule } from './search-input';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { AvatarModule } from './avatar';
     NavTabsModule,
     InitialsModule,
     AvatarModule,
+    SearchInputModule,
   ],
 })
 export class SharedUiModule {}
