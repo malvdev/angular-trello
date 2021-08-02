@@ -4,3 +4,4 @@ export * from './lib/form-field';
 export * from './lib/icon-svg';
 export * from './lib/main-template';
 export * from './lib/nav-tabs';
+export * from './lib/initials';

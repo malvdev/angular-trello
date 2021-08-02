@@ -6,6 +6,7 @@ import { FormFieldModule } from './form-field';
 import { IconSvgModule } from './icon-svg';
 import { MainTemplateModule } from './main-template';
 import { NavTabsModule } from './nav-tabs';
+import { InitialsModule } from './initials';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { NavTabsModule } from './nav-tabs';
     IconSvgModule,
     MainTemplateModule,
     NavTabsModule,
+    InitialsModule,
   ],
 })
 export class SharedUiModule {}
