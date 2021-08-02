@@ -1,0 +1,18 @@
+@import './styles/avatar/avatar.scss';
+
+:host {
+  position: relative;
+  display: block;
+  height: 2.3rem;
+  width: 2.3rem;
+  background-color: var(--color-dark-indigo-20-flat);
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  transition: background-color var(--transition);
+
+  &:hover {
+    background-color: var(--color-dark-indigo-15-flat);
+  }
+}

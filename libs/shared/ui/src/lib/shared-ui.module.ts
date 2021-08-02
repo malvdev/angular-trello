@@ -7,6 +7,7 @@ import { IconSvgModule } from './icon-svg';
 import { MainTemplateModule } from './main-template';
 import { NavTabsModule } from './nav-tabs';
 import { InitialsModule } from './initials';
+import { AvatarModule } from './avatar';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { InitialsModule } from './initials';
     MainTemplateModule,
     NavTabsModule,
     InitialsModule,
+    AvatarModule,
   ],
 })
 export class SharedUiModule {}
