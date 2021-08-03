@@ -1,5 +1,5 @@
 export interface MemberEntity {
   id?: string;
-  name: string;
+  username: string;
   url?: string;
 }
