@@ -1,0 +1,91 @@
+<form [formGroup]="addBoardForm" (ngSubmit)="onSubmit()" class="app-form">
+  <div class="app-form__header">
+    <h2 mat-dialog-title class="app-form__title">Add board</h2>
+    <button mat-dialog-close class="app-form__close">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div mat-dialog-content class="app-form__content">
+    <div class="app-form__field">
+      <fieldset>
+        <input
+          formControlName="title"
+          type="text"
+          name="title"
+          autocomplete="off"
+          autocorrect="off"
+          spellcheck="false"
+          placeholder="Title"
+        />
+      </fieldset>
+      <select formControlName="visibility" name="visibility" title="Visibility">
+        <option value="private">Private</option>
+        <option value="public">Public</option>
+      </select>
+    </div>
+    <div class="app-form__field">
+      <label class="app-form__field-label">Background</label>
+      <div class="app-selector">
+        <label class="app-selector__container">
+          <input
+            formControlName="background"
+            type="radio"
+            value="lightgrey"
+            class="app-selector__item app-selector__item_grey"
+          />
+          <div class="app-selector__background"></div>
+        </label>
+        <label class="app-selector__container">
+          <input
+            formControlName="background"
+            type="radio"
+            value="steelblue"
+            class="app-selector__item app-selector__item_blue"
+          />
+          <div class="app-selector__background"></div>
+        </label>
+        <label class="app-selector__container">
+          <input
+            formControlName="background"
+            type="radio"
+            value="darkorchid"
+            class="app-selector__item app-selector__item_purple"
+          />
+          <div class="app-selector__background"></div>
+        </label>
+        <label class="app-selector__container">
+          <input
+            formControlName="background"
+            type="radio"
+            value="darkorange"
+            class="app-selector__item app-selector__item_orange"
+          />
+          <div class="app-selector__background"></div>
+        </label>
+        <label class="app-selector__container">
+          <input
+            formControlName="background"
+            type="radio"
+            value="green"
+            class="app-selector__item app-selector__item_green"
+          />
+          <div class="app-selector__background"></div>
+        </label>
+        <label class="app-selector__container">
+          <input
+            formControlName="background"
+            type="radio"
+            value="tomato"
+            class="app-selector__item app-selector__item_red"
+          />
+          <div class="app-selector__background"></div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div mat-dialog-actions class="app-form__actions">
+    <button appUiButton [disabled]="!addBoardForm.valid" class="app-form__submit">
+      Add
+    </button>
+  </div>
+</form>

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ListBoardsModule } from './list-boards';
 import { BoardTileModule } from './board-tile';
 import { AddBoardTileModule } from './add-board-tile';
+import { AddBoardDialogModule } from './add-board-dialog';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import { AddBoardTileModule } from './add-board-tile';
     ListBoardsModule,
     BoardTileModule,
     AddBoardTileModule,
+    AddBoardDialogModule
   ],
 })
 export class BoardUiModule {}
