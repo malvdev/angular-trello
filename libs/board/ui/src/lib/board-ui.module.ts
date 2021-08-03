@@ -6,6 +6,7 @@ import { BoardTileModule } from './board-tile';
 import { AddBoardTileModule } from './add-board-tile';
 import { AddBoardDialogModule } from './add-board-dialog';
 import { AddBoardCardModule } from './add-board-card';
+import { BoardCardModule } from './board-card';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { AddBoardCardModule } from './add-board-card';
     AddBoardTileModule,
     AddBoardDialogModule,
     AddBoardCardModule,
+    BoardCardModule,
   ],
 })
 export class BoardUiModule {}
