@@ -13,6 +13,7 @@ import { HeaderModule } from './header';
 import { NotificationsSheetModule } from './notifications-sheet';
 import { MenuModule } from './menu';
 import { FocusAndSelectModule } from './focus-and-select';
+import { BadgeModule } from './badge';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import { FocusAndSelectModule } from './focus-and-select';
     HeaderModule,
     MenuModule,
     FocusAndSelectModule,
+    BadgeModule,
   ],
 })
 export class SharedUiModule {}
