@@ -30,6 +30,13 @@ const routes: Routes = [
         (m) => m.FeatureProfileModule
       ),
   },
+  {
+    path: '',
+    loadChildren: () =>
+      import('@trello/libs/board/feature-boards').then(
+        (m) => m.BoardFeatureBoardsModule
+      ),
+  },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
