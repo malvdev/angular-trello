@@ -1,19 +1,25 @@
 <div *ngIf="card" class="app-board-card">
   <div *ngIf="card.labels?.length" class="app-board-card__labels">
-    <app-label *ngFor="let label of card.labels" [label]="label"></app-label>
+    <app-ui-label
+      *ngFor="let label of card.labels"
+      [label]="label"
+    ></app-ui-label>
   </div>
   <div class="app-board-card__title">
     {{ card.title }}
   </div>
   <div class="app-board-card__meta">
     <div *ngIf="card?.badges?.length" class="app-board-card__badges">
-      <app-badge *ngFor="let badge of card.badges" [badge]="badge"></app-badge>
+      <app-ui-badge
+        *ngFor="let badge of card.badges"
+        [badge]="badge"
+      ></app-ui-badge>
     </div>
     <div *ngIf="card?.members?.length" class="app-board-card__members">
-      <app-avatar
+      <app-ui-avatar
         *ngFor="let member of card.members"
         [avatar]="member"
-      ></app-avatar>
+      ></app-ui-avatar>
     </div>
   </div>
 </div>
