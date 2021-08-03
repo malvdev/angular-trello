@@ -12,3 +12,4 @@ export * from './lib/header';
 export * from './lib/menu';
 export * from './lib/focus-and-select';
 export * from './lib/badge';
+export * from './lib/label';

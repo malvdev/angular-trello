@@ -1,0 +1,64 @@
+:host {
+  display: inline-block;
+  min-width: 2.8rem;
+  max-width: 200px;
+  height: 1rem;
+  margin: 0 0.25rem 0.25rem 0;
+  padding: 0.1rem 0.5rem;
+  background-color: var(--color-dark-indigo-15-flat);
+  color: var(--color-white);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-bold);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  border-radius: var(--border-radius-control);
+
+  &.app-label-green {
+    background-color: var(--color-green-15-flat);
+
+    &:hover {
+      background-color: var(--color-green-30-flat);
+    }
+  }
+
+  &.app-label-blue {
+    background-color: var(--color-blue-15-flat);
+
+    &:hover {
+      background-color: var(--color-blue-30-flat);
+    }
+  }
+
+  &.app-label-purple {
+    background-color: var(--color-purple-15-flat);
+
+    &:hover {
+      background-color: var(--color-purple-30-flat);
+    }
+  }
+
+  &.app-label-yellow {
+    background-color: var(--color-yellow-15-flat);
+
+    &:hover {
+      background-color: var(--color-yellow-30-flat);
+    }
+  }
+
+  &.app-label-red {
+    background-color: var(--color-red-15-flat);
+
+    &:hover {
+      background-color: var(--color-red-30-flat);
+    }
+  }
+
+  &.app-label-orange {
+    background-color: var(--color-orange-15-flat);
+
+    &:hover {
+      background-color: var(--color-orange-30-flat);
+    }
+  }
+}
