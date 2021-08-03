@@ -1,0 +1,33 @@
+<button
+  *ngIf="show"
+  (click)="toggle()"
+  type="button"
+  class="app-add-board-card__toggle"
+>
+  <mat-icon>add</mat-icon> Add {{ name }}
+</button>
+<ng-container *ngIf="!show">
+  <textarea
+    #input
+    appUiFocusAndSelect
+    [(ngModel)]="title"
+    (keyup.enter)="add()"
+    type="text"
+    name="title"
+    class="app-add-board-card__textarea"
+    placeholder="Enter a title for this {{ name }}"
+  ></textarea>
+  <div class="app-add-board-card__actions">
+    <button
+      appUiButton
+      (click)="add()"
+      type="button"
+      class="app-add-board-card__add"
+    >
+      Add {{ name }}
+    </button>
+    <button (click)="toggle()" class="app-add-board-card__close">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</ng-container>
