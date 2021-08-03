@@ -6,8 +6,8 @@
   >
     {{ avatar.username | appUiInitials }}
     <img
-      *ngIf="avatar.avatar"
-      [src]="avatar.avatar"
+      *ngIf="avatar.url"
+      [src]="avatar.url"
       [alt]="avatar.username"
       class="app-avatar__img"
       height="32"

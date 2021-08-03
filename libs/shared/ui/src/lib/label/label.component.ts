@@ -5,19 +5,7 @@ import {
   HostBinding,
 } from '@angular/core';
 
-export type ColorTypes =
-  | 'purple'
-  | 'green'
-  | 'blue'
-  | 'red'
-  | 'orange'
-  | 'yellow';
-
-export type Label = {
-  id: string;
-  title: string;
-  color?: ColorTypes;
-};
+import { LabelEntity } from '@trello/libs/board/domain';
 
 @Component({
   selector: 'app-ui-label',
@@ -27,7 +15,7 @@ export type Label = {
 })
 export class LabelComponent {
   @Input()
-  label: Label;
+  label: LabelEntity;
 
   @HostBinding('class')
   get classes(): string {

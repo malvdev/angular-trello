@@ -5,16 +5,7 @@ import {
   Input,
 } from '@angular/core';
 
-export type BadgeTypes = 'subscription' | 'tasks' | 'description';
-
-export interface BadgeType {
-  title: string;
-  icon: string;
-}
-
-export interface Badge {
-  type: BadgeTypes;
-}
+import { BadgeEntity, BadgeType } from '@trello/libs/board/domain';
 
 @Component({
   selector: 'app-ui-badge',
@@ -39,7 +30,7 @@ export class BadgeComponent {
   };
 
   @Input()
-  badge: Badge;
+  badge: BadgeEntity;
 
   get getType(): BadgeType {
     return this.types[this.badge?.type];

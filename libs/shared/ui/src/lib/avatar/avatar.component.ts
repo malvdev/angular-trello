@@ -1,9 +1,6 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
-export interface Avatar {
-  username: string;
-  avatar?: string;
-}
+import { MemberEntity } from '@trello/libs/board/domain';
 
 @Component({
   selector: 'app-ui-avatar',
@@ -13,5 +10,5 @@ export interface Avatar {
 })
 export class AvatarComponent {
   @Input()
-  avatar: Avatar | null;
+  avatar: MemberEntity | null;
 }
