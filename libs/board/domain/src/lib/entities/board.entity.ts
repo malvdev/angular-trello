@@ -17,6 +17,14 @@ export interface BoardEntity {
   lists?: ListEntity[];
 }
 
+export interface BoardsResponse {
+  boards: BoardEntity[];
+}
+
 export interface BoardResponse {
+  board: BoardEntity;
+}
+
+export interface BoardRequest {
   board: BoardEntity;
 }

@@ -4,7 +4,7 @@ export interface CardEntity {
   id: string;
   title: string;
   description?: string;
-  labels?: string[];
-  badges?: string[];
+  labels?: { [key: string]: string }[];
+  badges?: { [key: string]: string }[];
   members?: MemberEntity[];
 }
