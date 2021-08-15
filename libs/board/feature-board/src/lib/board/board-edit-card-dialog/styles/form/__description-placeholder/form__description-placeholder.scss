@@ -1,0 +1,12 @@
+.app-form__description-placeholder {
+  display: block;
+  min-height: 40px;
+  padding: 0.4rem 0.9rem;
+  background-color: rgba(9, 30, 66, 0.04);
+  border-radius: var(--border-radius-control);
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(9, 30, 66, 0.08);
+  }
+}

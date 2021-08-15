@@ -1,0 +1,12 @@
+.app-form__title {
+  margin: 0;
+  padding: 0.4rem;
+  background: #fff;
+  border-color: transparent;
+  font-size: 20px;
+  font-weight: 600;
+
+  &:focus {
+    border-color: var(--color-dark-indigo-15-flat);
+  }
+}

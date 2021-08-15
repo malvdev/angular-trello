@@ -1,0 +1,72 @@
+<div class="app-form">
+  <div class="app-form__header">
+    <div class="app-form__title-wrapper">
+      <mat-icon>title</mat-icon>
+      <input
+        class="app-form__title"
+        [value]="data.card.title"
+        [(ngModel)]="data.card.title"
+        type="text"
+      />
+    </div>
+    <button mat-dialog-close class="app-form__close">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div mat-dialog-content class="app-form__content">
+    <div class="app-form__description">
+      <div class="app-form__description-header">
+        <mat-icon>subject</mat-icon>
+        <h3>Description</h3>
+        <button (click)="toggleEditDescription()" class="app-form__action">
+          Edit
+        </button>
+      </div>
+      <p
+        *ngIf="data.card.description && !editDescription"
+        (click)="toggleEditDescription()"
+      >
+        {{ data.card.description }}
+      </p>
+      <div
+        *ngIf="!data.card.description && !editDescription"
+        (click)="toggleEditDescription()"
+        class="app-form__description-placeholder"
+      >
+        Add more detail ...
+      </div>
+      <ng-container *ngIf="editDescription">
+        <textarea
+          appUiFocusAndSelect
+          class="app-form__description-area"
+          name="description"
+          rows="5"
+          >{{ data.card.description }}</textarea
+        >
+        <div class="app-form__description-actions">
+          <button class="app-form__action">Save</button>
+          <button class="app-form__action" (click)="toggleEditDescription()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      </ng-container>
+    </div>
+    <div class="app-form__actions">
+      <h3 class="app-form__actions-title">Actions</h3>
+      <div class="app-form__action-list">
+        <button appButton class="app-form__action">
+          <mat-icon>perm_identity</mat-icon>Members
+        </button>
+        <button appButton class="app-form__action">
+          <mat-icon>new_label</mat-icon>Labels
+        </button>
+        <button appButton class="app-form__action">
+          <mat-icon>visibility</mat-icon>Subscribe
+        </button>
+        <button appButton class="app-form__action">
+          <mat-icon>archive</mat-icon>Archiving
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

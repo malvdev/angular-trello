@@ -1,0 +1,17 @@
+.app-form__action {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: rgba(9, 30, 66, 0.04);
+  color: var(--color-black);
+  font-size: 1rem;
+
+  &:hover {
+    background-color: rgba(9, 30, 66, 0.08);
+  }
+
+  &:active {
+    background-color: #e4f0f6;
+    color: #0079bf;
+  }
+}
