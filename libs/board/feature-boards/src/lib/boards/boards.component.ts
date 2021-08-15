@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -10,6 +10,7 @@ import { AddBoardDialogComponent } from '@trello/libs/board/ui';
   selector: 'app-boards',
   templateUrl: './boards.component.html',
   styleUrls: ['./boards.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BoardsComponent implements OnInit {
   starredBoards$: Observable<BoardEntity[]>;
