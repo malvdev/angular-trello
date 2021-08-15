@@ -1,0 +1,32 @@
+<div class="app-board-list">
+  <div class="app-board-list__wrapper">
+    <div *ngIf="list?.name" class="app-board-list__header">
+      <textarea class="app-board-list__name" rows="1">{{ list.name }}</textarea>
+      <div class="app-board-list__extras">
+        <button class="app-board-list__extras-menu" [matMenuTriggerFor]="menu">
+          <mat-icon aria-hidden="true">more_horiz</mat-icon>
+        </button>
+      </div>
+    </div>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>north</mat-icon>
+        Sort by date (newest first)
+      </button>
+      <button mat-menu-item>
+        <mat-icon>south</mat-icon>
+        Sort by date (oldest)
+      </button>
+      <button mat-menu-item>
+        <mat-icon>text_rotate_vertical</mat-icon>
+        Sort by name (alphabetically)
+      </button>
+    </mat-menu>
+    <div class="app-board-list__cards">
+      <ng-content></ng-content>
+    </div>
+    <div class="app-board-list__actions">
+      <ng-content select="app-ui-add-board-card"></ng-content>
+    </div>
+  </div>
+</div>

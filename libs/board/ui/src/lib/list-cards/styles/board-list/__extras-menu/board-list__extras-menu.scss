@@ -1,0 +1,19 @@
+.app-board-list__extras-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 4px 8px;
+  border: none;
+  background: transparent;
+  border-radius: 3px;
+  color: var(--color-black);
+
+  &:hover {
+    background-color: rgba(9, 30, 66, 0.08);
+  }
+
+  &:active {
+    background-color: rgba(9, 30, 66, 0.13);
+  }
+}

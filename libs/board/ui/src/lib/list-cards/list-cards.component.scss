@@ -1,0 +1,11 @@
+@import './styles/board-list/board-list.scss';
+
+:host {
+  display: block;
+  width: 272px;
+  margin: 0 0.4rem;
+  height: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  white-space: nowrap;
+}
