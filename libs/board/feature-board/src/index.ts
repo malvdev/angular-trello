@@ -1,1 +1,2 @@
-export * from './lib/board-feature-board.module';
+export * from './lib/feature-board.module';
+export * from './lib/board';
