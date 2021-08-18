@@ -16,7 +16,7 @@
   flex-direction: column;
   flex-grow: 1;
   height: 100%;
-  background-color: rgb(0, 121, 191);
+  background-color: var(--color-accent);
   overflow-y: auto;
   outline: none;
 }
