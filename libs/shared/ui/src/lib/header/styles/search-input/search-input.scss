@@ -4,6 +4,6 @@
   display: none;
 
   @media only all and (min-width: $mobile-l) {
-    display: block;
+    display: flex;
   }
 }
