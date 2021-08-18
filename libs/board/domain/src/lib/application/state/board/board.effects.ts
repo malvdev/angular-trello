@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
-import { catchError, concatMap, map } from 'rxjs/operators';
+import { catchError, concatMap, map, tap } from 'rxjs/operators';
 
-import { BoardResponse } from '../../entities';
-import { BoardService } from '../../infrastructure';
+import { BoardResponse } from '../../../entities';
+import { BoardService } from '../../../infrastructure';
 import * as BoardActions from './board.actions';
 
 @Injectable()
@@ -52,6 +53,17 @@ export class BoardEffects {
       )
     );
   });
+
+  deleteBoardSuccess$ = createEffect(
+    () =>
+      this._actions$.pipe(
+        ofType(BoardActions.deleteBoardSuccess),
+        tap(() => {
+          this._router.navigate(['/boards']);
+        })
+      ),
+    { dispatch: false }
+  );
 
   update$ = createEffect(() => {
     return this._actions$.pipe(
@@ -115,6 +127,7 @@ export class BoardEffects {
 
   constructor(
     private readonly _actions$: Actions,
-    private readonly _boardService: BoardService
+    private readonly _boardService: BoardService,
+    private readonly _router: Router
   ) {}
 }

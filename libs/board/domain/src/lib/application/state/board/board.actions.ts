@@ -1,6 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 
-import { BoardEntity } from '../../entities/board.entity';
+import { BoardEntity, CardEntity } from '../../../entities';
 
 export const init = createAction('[Board] INIT');
 
@@ -104,4 +104,34 @@ export const loadBoardSuccess = createAction(
 export const loadBoardFailure = createAction(
   '[Board] LOAD_BOARD_FAILURE',
   props<{ error: Error }>()
+);
+
+export const createCard = createAction(
+  '[Board] CREATE_CARD',
+  props<{ card: CardEntity }>()
+);
+
+export const createCardSuccess = createAction(
+  '[Board] LOAD_BOARD_SUCCESS',
+  props<{ card: BoardEntity }>()
+);
+
+export const createCardFail = createAction(
+  '[Board] LOAD_BOARD_FAIL',
+  props<{ card: Error }>()
+);
+
+export const createList = createAction(
+  '[Board] CREATE_LIST',
+  props<{ id: string; title: string }>()
+);
+
+export const createListSuccess = createAction(
+  '[Board] CREATE_LIST_SUCCESS',
+  props<{ board: BoardEntity }>()
+);
+
+export const createListFail = createAction(
+  '[Board] CREATE_LIST_FAIL',
+  props<{ card: Error }>()
 );

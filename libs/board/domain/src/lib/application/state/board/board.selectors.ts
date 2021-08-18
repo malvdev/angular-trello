@@ -16,8 +16,19 @@ export const getBoardError = createSelector(
   (state: State) => state.error
 );
 
+export const getSelectedId = createSelector(
+  getBoardState,
+  (state: State) => state.selectedId
+);
+
 export const getAllBoard = createSelector(getBoardState, (state: State) =>
   selectAll(state)
+);
+
+export const getBoard = createSelector(
+  getAllBoard,
+  getSelectedId,
+  (boards, id) => boards.find((board) => board.id === id)
 );
 
 export const getBoardEntities = createSelector(getBoardState, (state: State) =>

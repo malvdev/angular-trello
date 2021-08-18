@@ -1,5 +1,5 @@
-import { BoardEntity } from '../../entities/board.entity';
-import { boardAdapter, BoardPartialState, initialState } from './board.reducer';
+import { BoardEntity } from '../../../entities';
+import { boardAdapter, BoardPartialState, initialBoardState } from './board.reducer';
 import * as BoardSelectors from './board.selectors';
 
 describe('Board Selectors', () => {
@@ -22,7 +22,7 @@ describe('Board Selectors', () => {
           createBoardEntity('PRODUCT-CCC'),
         ],
         {
-          ...initialState,
+          ...initialBoardState,
           selectedId: 'PRODUCT-BBB',
           error: ERROR_MSG,
           loaded: true,

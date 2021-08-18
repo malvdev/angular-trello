@@ -1,7 +1,7 @@
 import { createReducer, on, Action } from '@ngrx/store';
 import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
 
-import { BoardEntity } from '../../entities/board.entity';
+import { BoardEntity } from '../../../entities';
 import * as BoardActions from './board.actions';
 
 export const BOARD_FEATURE_KEY = 'board';
@@ -19,12 +19,12 @@ export interface BoardPartialState {
 export const boardAdapter: EntityAdapter<BoardEntity> =
   createEntityAdapter<BoardEntity>();
 
-export const initialState: State = boardAdapter.getInitialState({
+export const initialBoardState: State = boardAdapter.getInitialState({
   loaded: false,
 });
 
 const reducer = createReducer(
-  initialState,
+  initialBoardState,
   on(BoardActions.init, (state) => ({ ...state, loaded: false, error: null })),
   on(BoardActions.loadBoardsSuccess, (state, { boards }) =>
     boardAdapter.setAll(boards, {
@@ -82,9 +82,26 @@ const reducer = createReducer(
     ...state,
     error,
   })),
-  on(BoardActions.loadBoardSuccess, (state) => ({
+  on(BoardActions.loadBoardSuccess, (state, { board }) =>
+    boardAdapter.addOne(board, {
+      ...state,
+      selectedId: board.id,
+      error: null,
+    })
+  ),
+  on(BoardActions.loadBoardFailure, (state, { error }) => ({
     ...state,
+    error,
   })),
+  on(BoardActions.createListSuccess, (state, { board }) =>
+    boardAdapter.updateOne(
+      { id: board.id, changes: board },
+      {
+        ...state,
+        error: null,
+      }
+    )
+  ),
   on(BoardActions.loadBoardFailure, (state, { error }) => ({
     ...state,
     error,

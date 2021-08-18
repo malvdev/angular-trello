@@ -1,6 +1,6 @@
-import { BoardEntity } from '../../entities/board.entity';
+import { BoardEntity } from '../../../entities';
 import * as BoardActions from './board.actions';
-import { State, initialState, boardReducer } from './board.reducer';
+import { State, initialBoardState, boardReducer } from './board.reducer';
 
 describe('Board Reducer', () => {
   const createBoardEntity = (id: string, title = ''): BoardEntity => ({
@@ -16,7 +16,7 @@ describe('Board Reducer', () => {
       ];
       const action = BoardActions.loadBoardsSuccess({ boards });
 
-      const result: State = boardReducer(initialState, action);
+      const result: State = boardReducer(initialBoardState, action);
 
       expect(result.loaded).toBe(true);
       expect(result.ids.length).toBe(2);
@@ -27,9 +27,9 @@ describe('Board Reducer', () => {
     it('should return the previous state', () => {
       const action = {} as any;
 
-      const result = boardReducer(initialState, action);
+      const result = boardReducer(initialBoardState, action);
 
-      expect(result).toBe(initialState);
+      expect(result).toBe(initialBoardState);
     });
   });
 });
