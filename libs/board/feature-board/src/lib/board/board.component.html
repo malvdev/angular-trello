@@ -7,6 +7,7 @@
             <div class="app-board__section">
               <input
                 class="app-board__name-input"
+                [value]="(board$ | async)?.title"
               />
               <button
                 appUiButton
@@ -43,7 +44,7 @@
                   <mat-icon aria-hidden="true">more_horiz</mat-icon>
                 </button>
                 <mat-menu #menu="matMenu">
-                  <button mat-menu-item>
+                  <button mat-menu-item (click)="deleteBoard()">
                     <mat-icon>delete</mat-icon>
                     Delete the board
                   </button>
@@ -54,7 +55,7 @@
           <div class="app-board__canvas">
             <div class="app-board__lists">
               <app-ui-list-cards
-                *ngFor="let list of (board$ | async)?.lists"
+                *ngFor="let list of lists$ | async"
                 [list]="list"
               >
                 <app-ui-board-card

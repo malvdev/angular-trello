@@ -7,6 +7,8 @@ import {
   BoardEntity,
   BoardFacade,
   CardEntity,
+  ListEntity,
+  ListFacade,
 } from '@trello/libs/board/domain';
 
 import { BoardEditCardDialogComponent } from './board-edit-card-dialog';
@@ -20,9 +22,11 @@ import { BoardEditCardDialogComponent } from './board-edit-card-dialog';
 export class BoardComponent implements OnInit {
   id: string;
   board$: Observable<BoardEntity | undefined>;
+  lists$: Observable<ListEntity[] | undefined>;
 
   constructor(
     private readonly _boardFacade: BoardFacade,
+    private readonly _listFacade: ListFacade,
     private readonly _route: ActivatedRoute,
     private readonly _dialog: MatDialog
   ) {
@@ -31,6 +35,7 @@ export class BoardComponent implements OnInit {
 
   ngOnInit(): void {
     this.board$ = this._boardFacade.board$;
+    this.lists$ = this._listFacade.allLists$;
   }
 
   openCardEdit(card: CardEntity): void {
@@ -68,5 +73,9 @@ export class BoardComponent implements OnInit {
 
   updateBoard(id: string, name: string) {
     //
+  }
+
+  deleteBoard(): void {
+    this._boardFacade.delete(this.id);
   }
 }
