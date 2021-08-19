@@ -5,3 +5,11 @@ export interface ListEntity {
   name: string;
   cards: CardEntity[];
 }
+
+export interface ListResponse {
+  list: ListEntity;
+}
+
+export interface ListsResponse {
+  lists: ListEntity[];
+}
