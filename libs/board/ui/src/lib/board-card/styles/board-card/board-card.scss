@@ -1,0 +1,25 @@
+@import './__badges/board-card__badges.scss';
+@import './__labels/board-card__labels.scss';
+@import './__members/board-card__members.scss';
+@import './__meta/board-card__meta.scss';
+@import './__title/board-card__title.scss';
+
+.app-board-card {
+  position: relative;
+  display: block;
+  max-width: 300px;
+  min-height: 1.6rem;
+  margin-bottom: 0.7rem;
+  padding: 0.7rem;
+  border-radius: var(--border-radius-control);
+  background-color: var(--color-white);
+  box-shadow: 0 1px 0 rgb(9 30 66 / 25%);
+  transition: background-color var(--transition);
+  overflow: hidden;
+  z-index: 10;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f4f5f7;
+  }
+}

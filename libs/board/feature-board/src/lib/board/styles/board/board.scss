@@ -1,0 +1,22 @@
+@import './__canvas/board__canvas.scss';
+@import './__content/board__content.scss';
+@import './__header/app-board__header.scss';
+@import './__lists/board__lists.scss';
+@import './__main-content/board__main-content.scss';
+@import './__member/board__member.scss';
+@import './__members/board__memebers.scss';
+@import './__name-input/board__name-input.scss';
+@import './__section/board__section.scss';
+@import './__visibility/board__visibility.scss';
+@import './__wrapper/board__wrapper.scss';
+
+.app-board {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  background-color: var(--color-accent);
+  overflow-y: auto;
+  outline: none;
+}

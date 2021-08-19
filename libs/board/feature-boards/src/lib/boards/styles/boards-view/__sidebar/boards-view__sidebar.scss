@@ -1,0 +1,13 @@
+@import 'vars.scss';
+
+.app-boards-view__sidebar {
+  position: sticky;
+  top: 1.2rem;
+  margin: 3rem 0 0;
+  padding: 0 1.2rem;
+  min-width: 200px;
+
+  @media only screen and (max-width: $tablet-s) {
+    display: none;
+  }
+}

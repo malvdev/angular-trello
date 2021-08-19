@@ -126,6 +126,106 @@
         }
       }
     },
+    "board-domain": {
+      "projectType": "library",
+      "root": "libs/board/domain",
+      "sourceRoot": "libs/board/domain/src",
+      "prefix": "app-board",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/board/domain"],
+          "options": {
+            "jestConfig": "libs/board/domain/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/board/domain/src/**/*.ts",
+              "libs/board/domain/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "board-feature-board": {
+      "projectType": "library",
+      "root": "libs/board/feature-board",
+      "sourceRoot": "libs/board/feature-board/src",
+      "prefix": "app-board",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/board/feature-board"],
+          "options": {
+            "jestConfig": "libs/board/feature-board/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/board/feature-board/src/**/*.ts",
+              "libs/board/feature-board/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "board-feature-boards": {
+      "projectType": "library",
+      "root": "libs/board/feature-boards",
+      "sourceRoot": "libs/board/feature-boards/src",
+      "prefix": "app-board",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/board/feature-boards"],
+          "options": {
+            "jestConfig": "libs/board/feature-boards/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/board/feature-boards/src/**/*.ts",
+              "libs/board/feature-boards/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "board-ui": {
+      "projectType": "library",
+      "root": "libs/board/ui",
+      "sourceRoot": "libs/board/ui/src",
+      "prefix": "app-board",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/board/ui"],
+          "options": {
+            "jestConfig": "libs/board/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/board/ui/src/**/*.ts",
+              "libs/board/ui/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "config": {
       "projectType": "library",
       "root": "libs/config",

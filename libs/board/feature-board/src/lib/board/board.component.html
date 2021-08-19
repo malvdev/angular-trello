@@ -1,0 +1,83 @@
+<app-ui-main-template>
+  <div class="app-board">
+    <div class="app-board__content">
+      <div class="app-board__wrapper">
+        <div class="app-board__main-content">
+          <div class="app-board__header">
+            <div class="app-board__section">
+              <input
+                class="app-board__name-input"
+                [value]="(board$ | async)?.title"
+              />
+              <button
+                appUiButton
+                appUiButtonType="third"
+                (click)="starToggle(id)"
+                [class.app-icon-star_favorite]="(board$ | async)?.isFavorite"
+                class="app-icon-star"
+              ></button>
+              <div class="app-board__visibility">
+                <mat-menu #menuVisibility="matMenu">
+                  <button mat-menu-item>
+                    <mat-icon>lock</mat-icon>Private
+                  </button>
+                  <button mat-menu-item>
+                    <mat-icon>language</mat-icon>Public
+                  </button>
+                </mat-menu>
+              </div>
+              <div class="app-board__members">
+                <app-ui-avatar
+                  *ngFor="let member of (board$ | async)?.members"
+                  [avatar]="member"
+                  class="app-board__member"
+                ></app-ui-avatar>
+              </div>
+            </div>
+            <div class="app-board__section">
+              <div class="app-board__menu">
+                <button
+                  appUiButton
+                  appUiButtonType="third"
+                  [matMenuTriggerFor]="menu"
+                >
+                  <mat-icon aria-hidden="true">more_horiz</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item (click)="deleteBoard()">
+                    <mat-icon>delete</mat-icon>
+                    Delete the board
+                  </button>
+                </mat-menu>
+              </div>
+            </div>
+          </div>
+          <div class="app-board__canvas">
+            <div class="app-board__lists">
+              <app-ui-list-cards
+                *ngFor="let list of lists$ | async"
+                [list]="list"
+              >
+                <app-ui-board-card
+                  *ngFor="let card of list.cards"
+                  [card]="card"
+                  (click)="openCardEdit(card)"
+                ></app-ui-board-card>
+                <app-ui-add-board-card
+                  name="card"
+                  (addEvent)="createCard($event)"
+                ></app-ui-add-board-card>
+              </app-ui-list-cards>
+              <app-ui-list-cards>
+                <app-ui-add-board-card
+                  name="list"
+                  (addEvent)="createList($event)"
+                ></app-ui-add-board-card>
+              </app-ui-list-cards>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-ui-main-template>

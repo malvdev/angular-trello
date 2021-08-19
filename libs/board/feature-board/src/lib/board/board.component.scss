@@ -1,0 +1,7 @@
+@import './styles/board/board.scss';
+@import './styles/icon-star/icon-star.scss';
+
+:host {
+  display: block;
+  height: 100%;
+}

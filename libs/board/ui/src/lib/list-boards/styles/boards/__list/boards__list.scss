@@ -1,0 +1,25 @@
+@import 'vars.scss';
+
+.app-boards__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem 1rem;
+}
+
+@media only all and (min-width: $mobile-l) {
+  .app-boards__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only all and (min-width: $tablet-m) {
+  .app-boards__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only all and (min-width: $desktop-s) {
+  .app-boards__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

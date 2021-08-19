@@ -1,0 +1,25 @@
+<div
+  *ngIf="board"
+  [style.background-color]="getBackground()"
+  class="app-board-tile"
+>
+  <span class="app-board-tile__fade"></span>
+  <div class="app-board-tile__details">
+    <div [title]="board.title" class="app-board-tile__details-name">
+      {{ board.title }}
+    </div>
+    <div class="app-board-tile__details-sub-container">
+      <span [title]="board.team" class="app-board-tile__details-sub-name">
+        {{ board.team }}
+      </span>
+      <span class="app-board-tile__options">
+        <span
+          (click)="toggleFavorite($event, board)"
+          [class.app-is-starred]="favorite"
+          title="Click to star this board. It will show up at the top of your boards list."
+          class="app-icon-star app-board-tile__options-star-icon"
+        ></span>
+      </span>
+    </div>
+  </div>
+</div>

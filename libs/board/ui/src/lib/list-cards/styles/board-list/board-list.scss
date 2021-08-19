@@ -1,0 +1,17 @@
+@import './__actions/board-list__actions.scss';
+@import './__extras-menu/board-list__extras-menu.scss';
+@import './__extras/board-list__extras.scss';
+@import './__cards/board-list__cards.scss';
+@import './__header/board-list__header.scss';
+@import './__name/board-list__name.scss';
+@import './__wrapper/board-list__wrapper.scss';
+
+.app-board-list {
+  width: 272px;
+  margin: 0 0.4rem;
+  height: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+}

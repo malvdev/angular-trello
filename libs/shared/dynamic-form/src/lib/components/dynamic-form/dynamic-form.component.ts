@@ -15,6 +15,7 @@ import {
 } from '@angular/forms';
 import { Observable, Subject, combineLatest } from 'rxjs';
 import { debounceTime, map, takeUntil, tap, filter } from 'rxjs/operators';
+
 import { DynamicFieldEntity } from '../../entities';
 
 @Component({
@@ -44,13 +45,13 @@ export class DynamicFormComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.structure$
       .pipe(
-        map(this.formBuilder),
+        map(this._dynamicFormBuilder),
         tap((f) => (this.form = f)),
-        tap((f) => this.listenFormChanges(f)),
+        tap((f) => this._listenFormChanges(f)),
         (f$) => combineLatest([f$, this.data$]),
         takeUntil(this.unsubscribe$)
       )
-      .subscribe(this.patchValue);
+      .subscribe(this._patchValue);
 
     if (this.touchedForm$) {
       this.touchedForm$
@@ -71,27 +72,29 @@ export class DynamicFormComponent implements OnInit, OnDestroy {
     this.unsubscribe$.complete();
   }
 
-  private formBuilder = (structure: DynamicFieldEntity[]): FormGroup => {
+  private _dynamicFormBuilder = (
+    structure: DynamicFieldEntity[]
+  ): FormGroup => {
     const group = this._formBuilder.group({});
     structure.forEach((field) =>
-      group.addControl(field.name, this.control(field))
+      group.addControl(field.name, this._control(field))
     );
     return group;
   };
 
-  private control = (field: DynamicFieldEntity): FormControl => {
+  private _control = (field: DynamicFieldEntity): FormControl => {
     return this._formBuilder.control(field.defaultValue || '', field.validator);
   };
 
-  private patchValue = ([form, data]: any) => {
+  private _patchValue = ([form, data]: any) => {
     data
       ? form.patchValue(data, { emitEvent: false })
       : form.patchValue({}, { emitEvent: false });
   };
 
-  private listenFormChanges(form: FormGroup) {
+  private _listenFormChanges(form: FormGroup) {
     form.valueChanges
       .pipe(debounceTime(100), takeUntil(this.unsubscribe$))
-      .subscribe((changes: any) => this.updateForm.emit({ changes, form }));
+      .subscribe((changes) => this.updateForm.emit({ changes, form }));
   }
 }

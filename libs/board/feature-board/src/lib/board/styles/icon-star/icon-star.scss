@@ -1,0 +1,7 @@
+@import './_favorite/icon-star_favorite.scss';
+
+.app-icon-star:before {
+  content: '\2605';
+  font-size: 24px;
+  line-height: 1;
+}

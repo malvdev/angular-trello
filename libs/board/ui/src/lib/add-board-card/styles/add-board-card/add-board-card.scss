@@ -1,0 +1,10 @@
+@import './__actions/add-board-card__actions.scss';
+@import './__add/add-board-card__add.scss';
+@import './__close/add-board-card__close.scss';
+@import './__textarea/add-board-card__textarea.scss';
+@import './__toggle/add-board-card__toggle.scss';
+
+:host {
+  display: block;
+  width: 100%;
+}

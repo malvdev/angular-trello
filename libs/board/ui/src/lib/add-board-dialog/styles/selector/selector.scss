@@ -1,0 +1,9 @@
+.app-selector {
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  gap: 0.5rem;
+}
+
+@import './__background/selector__background.scss';
+@import './__container/selector__container.scss';
+@import './__item/selector__item.scss';

@@ -1,0 +1,15 @@
+@import 'vars.scss';
+
+.app-form__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @media screen and (min-width: $tablet-s) {
+    grid-template-columns: minmax(268px, 1fr) 150px;
+  }
+
+  @media screen and (min-width: $tablet-m) {
+    grid-template-columns: minmax(480px, 1fr) 150px;
+  }
+}

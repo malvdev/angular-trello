@@ -11,6 +11,10 @@ import { AvatarModule } from './avatar';
 import { SearchInputModule } from './search-input';
 import { HeaderModule } from './header';
 import { NotificationsSheetModule } from './notifications-sheet';
+import { MenuModule } from './menu';
+import { FocusAndSelectModule } from './focus-and-select';
+import { BadgeModule } from './badge';
+import { LabelModule } from './label';
 
 @NgModule({
   imports: [
@@ -25,6 +29,10 @@ import { NotificationsSheetModule } from './notifications-sheet';
     SearchInputModule,
     NotificationsSheetModule,
     HeaderModule,
+    MenuModule,
+    FocusAndSelectModule,
+    BadgeModule,
+    LabelModule,
   ],
 })
 export class SharedUiModule {}

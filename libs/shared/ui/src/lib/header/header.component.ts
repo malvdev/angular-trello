@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
-import { Avatar } from '../avatar';
+import { MemberEntity } from '@trello/libs/board/domain';
+
 import { NotificationsSheetComponent } from '../notifications-sheet';
 
 @Component({
@@ -10,7 +11,7 @@ import { NotificationsSheetComponent } from '../notifications-sheet';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  avatar: Avatar = {
+  avatar: MemberEntity = {
     username: 'Default',
   };
 

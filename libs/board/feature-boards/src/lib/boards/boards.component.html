@@ -1,0 +1,59 @@
+<app-ui-main-template>
+  <div class="app-boards-view">
+    <div class="app-boards-view__sticky">
+      <div class="app-boards-view__sidebar">
+        <app-ui-menu>
+          <app-ui-menu-item
+            [routerLink]="['/boards']"
+            routerLinkActive="_active"
+          >
+            Boards
+          </app-ui-menu-item>
+        </app-ui-menu>
+      </div>
+
+      <div class="app-boards-view__list">
+        <ng-container *ngIf="isLoading$ | async; else isLoading">
+          <app-ui-list-boards
+            *ngIf="(starredBoards$ | async)?.length"
+            titleBoard="Starred Boards"
+          >
+            <a
+              *ngFor="let board of starredBoards$ | async"
+              (click)="goToBoard(board.id)"
+              href="javascript:void(0);"
+            >
+              <app-ui-board-tile
+                [board]="board"
+                [favorite]="board.isFavorite || false"
+                (favoriteEvent)="favorite($event)"
+                (unFavoriteEvent)="unFavorite($event)"
+              ></app-ui-board-tile>
+            </a>
+          </app-ui-list-boards>
+          <app-ui-list-boards titleBoard="Personal Boards">
+            <a
+              *ngFor="let board of boards$ | async"
+              (click)="goToBoard(board.id)"
+              href="javascript:void(0);"
+            >
+              <app-ui-board-tile
+                [board]="board"
+                [favorite]="board.isFavorite || false"
+                (favoriteEvent)="favorite($event)"
+                (unFavoriteEvent)="unFavorite($event)"
+              ></app-ui-board-tile>
+            </a>
+            <app-ui-add-board-tile
+              (click)="openAddBoard()"
+            ></app-ui-add-board-tile>
+          </app-ui-list-boards>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</app-ui-main-template>
+
+<ng-template #isLoading>
+  <div class="app-boards-loading">Loading...</div>
+</ng-template>

@@ -1,0 +1,34 @@
+@import './__details-name/board-tile__details-name.scss';
+@import './__details/board-tile__details.scss';
+@import './__details-sub-container/board-tile__details-sub-container.scss';
+@import './__details-sub-name/board-tile__details-sub-name.scss';
+@import './__fade/board-tile__fade.scss';
+@import './__options-star-icon/board-tile__options-star-icon.scss';
+@import './__options/board-tile__options.scss';
+
+.app-board-tile {
+  position: relative;
+  padding: 0.8rem;
+  border-radius: var(--border-radius-control);
+  background-color: var(--color-accent);
+  background-size: cover;
+  background-position: 50%;
+  color: var(--color-white);
+  cursor: pointer;
+
+  &:hover {
+    .app-board-tile__fade {
+      background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    .app-board-tile__options-star-icon {
+      width: 19px;
+      opacity: 0.75;
+    }
+
+    .app-app-board-tile__options-star-icon.app-is-starred {
+      color: var(--color-yellow-30-flat);
+      opacity: 1;
+    }
+  }
+}

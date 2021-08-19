@@ -1,0 +1,52 @@
+.app-selector__item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+
+  &_blue + .app-selector__background {
+    background: darkblue;
+  }
+
+  &_red + .app-selector__background {
+    background: darkred;
+  }
+
+  &_purple + .app-selector__background {
+    background: darkorchid;
+  }
+
+  &_grey + .app-selector__background {
+    background: lightgrey;
+  }
+
+  &_green + .app-selector__background {
+    background: darkgreen;
+  }
+
+  &_orange + .app-selector__background {
+    background: darkorange;
+  }
+
+  &:checked + .app-selector__background {
+    &:before {
+      content: '\2713';
+    }
+  }
+
+  &:hover + .app-selector__background {
+    &:before {
+      background: rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &:focus + .app-selector__background {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+}
