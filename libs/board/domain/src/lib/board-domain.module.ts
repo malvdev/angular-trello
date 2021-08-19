@@ -8,15 +8,20 @@ import {
   BoardFacade,
   boardReducer,
   BOARD_FEATURE_KEY,
+  ListEffects,
+  ListFacade,
+  listReducer,
+  LIST_FEATURE_KEY,
 } from './application';
-import { BoardService } from './infrastructure';
+import { BoardService, ListService } from './infrastructure';
 
 @NgModule({
   imports: [
     CommonModule,
     StoreModule.forFeature(BOARD_FEATURE_KEY, boardReducer),
-    EffectsModule.forFeature([BoardEffects]),
+    StoreModule.forFeature(LIST_FEATURE_KEY, listReducer),
+    EffectsModule.forFeature([BoardEffects, ListEffects]),
   ],
-  providers: [BoardFacade, BoardService],
+  providers: [BoardFacade, ListFacade, BoardService, ListService],
 })
 export class BoardDomainModule {}
